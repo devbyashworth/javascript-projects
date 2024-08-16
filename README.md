@@ -29,7 +29,7 @@ Below is a list of the projects included in this repository. Each project has it
 3. **[Project 3: Weather App](projects/weather-app)**
    - A weather application that fetches and displays weather data from a public API.
 
-**Explore Additional Projects in the Projects Folder**
+**[Explore Additional Projects in the Projects Folder](projects)**
 
 ## Installation
 
