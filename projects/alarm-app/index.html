@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Alarm App</h1>
+        <div class="timer-display"></div>
+        <div class="alarm-container">
+            <div class="alarm-inputs">
+                <input type="number" name="hourInput" id="hourInput" placeholder="00" min="0" max="23">
+                <input type="number" name="minuteInput" id="minuteInput" placeholder="00" min="0" max="59">
+            </div>
+            <button id="set">Add Alarm</button>
+            <div class="activeAlarms"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

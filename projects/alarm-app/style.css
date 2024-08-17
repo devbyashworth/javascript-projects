@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fefefe;
+    font-family: "Poppins", sans-serif;
+    background-color: #080808;
+}
+
+.hide {
+    display: none;
+}
+
+.container {
+    border: none;
+    width: 550px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #171717;
+    border-radius: 10px;
+}
+
+.container .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container .timer-display {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Roboto Mono";
+}
+
+.container .alarm-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1.1rem;
+}
+
+.alarm-container input {
+    width: 4rem;
+    font-size: 1.1rem;
+    border-radius: .3rem;
+    padding: .6rem 0.6rem;
+    border: 1px solid #080808;
+}
+
+.alarm-container #set {
+    border: none;
+    display: block;
+    color: #fefefe;
+    border-radius: .5rem;
+    padding: 0.9rem 1.8rem;
+    margin: .8rem auto 0 auto;
+    background-color: #377dff;
+    cursor: pointer; 
+}
+
+.alarm-container #set:hover {
+    border: 1px solid #377dff;
+    background-color: transparent;
+}
+
+.alarm {
+    display: grid;
+    grid-template-columns: 8fr 2fr 2fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid #898f9b;
+}
+
+.alarm input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    outline: none;
+    height: 2rem;
+    width: 3.75rem;
+    cursor: pointer;
+    border-radius: 1.25rem;
+    background-color: #e2e2ec;    
+}
+
+.alarm input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1.43rem;
+    height: 1.43rem;
+    border-radius: 50%;
+    background-color: #757683;    
+}
+
+.alarm input[type="checkbox"]:checked { background-color: #d2e2ff; }
+.alarm input[type="checkbox"]:checked::before {
+    left: 2rem;
+    background-color: #377dff;
+}
+
+.deleteButton {
+    border: none;
+    cursor: pointer;
+    color: #377dff;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
