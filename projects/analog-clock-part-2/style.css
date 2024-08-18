@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fefefe;
+    font-family: "Poppins", sans-serif;
+    background-color: #080808;
+}
+
+.container {
+    border: none;
+    width: 550px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.clock-container {
+    position: relative;
+    border: none;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease .2s;
+}
+
+.clock{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid #666666;
+    background-color: #333333;
+}
+
+.clock::before {
+    position: absolute;
+    content: "";
+    width: 0.75rem;
+    height: 0.75em;
+    z-index: 1000;
+    border-radius: 50%;
+    border: .75px solid #999999;
+    background-color: #333333;
+    transition: all ease .2s;
+}
+
+#hour, #minute, #second {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#hour {
+    width: 10em;
+    height: 10em;
+}
+#hour::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 50%;
+    border-radius: 6px;
+    background-color: #666666;
+}
+
+#minute {
+    width: 12em;
+    height: 12em;
+}
+#minute::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 50%;
+    border-radius: 4px;
+    background-color: #999999;
+}
+
+#second {
+    width: 13em;
+    height: 13em;
+}
+#second::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 60%;
+    border-radius: 2px;
+    background-color: #cccccc;
+}
+
+
+.num {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #121212;
+    font-family: "Digital", Arial, Helvetica, sans-serif;
+    z-index: 9;
+}
+
+
+.n-1, .n-2, .n-4, .n-5, 
+.n-7, .n-8, .n-10, .n-11 {
+    width: 2px;
+    height: 15px;
+    background-color: #121212;
+}
+
+.n-1{
+    top: 34px;
+    right: 80px;
+    transform: rotate(40deg);
+}
+.n-2{
+    top: 80px;
+    right: 35px;
+    transform: rotate(50deg);
+}
+.n-3 {
+    right: 12px;
+}
+.n-4 {
+    top: 205px;
+    right: 38px;
+    transform: rotate(120deg);
+}
+.n-5 {
+    top: 250px;
+    right: 85px;
+    transform: rotate(140deg);
+}
+.n-6 {
+    bottom: 12px;
+}
+.n-7 {
+    bottom: 40px;
+    left: 80px;
+    transform: rotate(-145deg);
+}
+.n-8 {
+    bottom: 90px;
+    left: 38px;
+    transform: rotate(-120deg);
+}
+.n-9 {
+    left: 12px;
+}
+.n-10{
+    top: 80px;
+    left: 35px;
+    transform: rotate(-50deg);
+}
+.n-11 {
+    top: 34px;
+    left: 80px;
+    transform: rotate(-40deg);
+}
+.n-12 {
+    top: 12px;
+}
