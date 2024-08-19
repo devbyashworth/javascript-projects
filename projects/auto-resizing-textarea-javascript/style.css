@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fefefe;
+    background-color: #1a1a1a;
+}
+
+h1 {
+    font-variant: small-caps;
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 450px;
+    height: 40px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+    scrollbar-width: none;
+    border: 1px solid #cccccc;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
