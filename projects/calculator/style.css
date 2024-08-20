@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0d7ff;
+    font-family: "Roboto";
+    min-height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 60px);
+    background-color: hsl(220, 6%, 10%);
+    justify-content: center;
+    border-radius: 12px;
+    padding: 1.4rem;
+    gap: .7rem;
+}
+
+.calculator button {
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    font-family: inherit;
+    color: hsl(204, 100%, 58%);
+    background-color: hsl(230, 6%, 20%);
+}
+
+.calculator button:hover {
+    background-color: hsl(230, 6%, 30%);
+}
+
+.calculator .span-2 {
+    grid-column: span 2;
+}
+
+.calculator .output {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: inherit;
+    word-break: break-all;
+    word-wrap: break-word;
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: hsl(230, 6%, 20%);
+}
+
+.output .previous-display {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 65%);
+}
