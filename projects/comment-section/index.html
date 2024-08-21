@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Section</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="comment-container">
+            <div class="avatar">
+                <img class="avatar" src="assets/home-office-1.jpg" alt="User Avatar">
+            </div>
+            <form action="" id="comment-form" class="comment-form">
+                <textarea tabindex="1" name="comment-textarea" id="comment-textarea" cols="30" rows="4" minlength="5" placeholder="Write a comment..." required></textarea>
+                <div class="comment-toolbar">
+                    <button id="reset-button" class="button-secondary" tabindex="3" type="reset">
+                        Reset
+                    </button>
+                    <button id="confirm-button" class="button-primary" tabindex="2" type="submit">
+                        Comment
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="comments"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
