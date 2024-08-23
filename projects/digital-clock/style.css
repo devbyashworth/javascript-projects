@@ -1,0 +1,21 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+body {
+    background-color: #091a20;
+    font-family: "Poppins", "Courier New", cursive, monospace;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #215164;
+    text-align: center;
+    letter-spacing: 5px;
+}
