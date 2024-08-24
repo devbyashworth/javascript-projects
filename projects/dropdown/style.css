@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fefefe;
+    height: 100vh;
+    background-color: #333333;
+    background-color: #1b1b1b;
+    font-family: "Poppins", sans-serif;
+}
+
+.dropdown .main-item {
+    width: 350px;
+    padding: 15px 12px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: #3b3b3b;
+}
+
+.main-container {
+    position: relative;
+    list-style: none;
+}
+
+.main-container .menu-item {
+    position: relative;
+    padding: 25px 50px;
+    width: 100%;
+}
+
+.menu-item .y-line {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 3px;
+    height: 100%;
+    background-color: #3b3b3b;
+}
+
+.menu-item:last-child .y-line {
+    height: 50%;
+}
+
+.menu-item .x-line {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: 7.4%;
+    height: 3px;
+    background-color: #3b3b3b;
+}
+
+.menu-item .item-text {
+    position: absolute;
+    top: 14.8%;
+    left: 14.8%;
+    width: 265px;
+    text-align: left;
+    padding: 12px 4px;
+    border-radius: 2px;
+    background-color: #3b3b3b;
+}
