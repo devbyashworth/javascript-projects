@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    font-family: "Poppins", sans-serif;
+}
+
+.card {
+    width: 100%;
+    padding: 25px;
+}
+
+.title {
+    padding: .5rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.accordion h2 {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    color: #fefefe;
+    background-color: #333333;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-button {
+    width: 100%;
+    border: none;
+    padding: 1.1rem;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    background-color: #eee;
+    transition: all 0.5s linear;
+} 
+
+.accordion-button:after {
+    content: "\27A4";
+    float: right;
+    color: #333333;
+    transition: all 0.3s linear;
+}
+
+.accordion-button.is-open:after {
+    transform: rotate(90deg);
+}
+.accordion-button:hover, .accordion-button.is-open {
+    color: #121212;
+    font-weight: bold;
+}
+
+.accordion-content {
+    display: none;
+    padding: 2rem 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-content p {
+    margin: 0;
+}
