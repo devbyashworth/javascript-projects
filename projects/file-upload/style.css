@@ -1,0 +1,160 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global CSS variables */
+:root {
+    --text: #fefefe;
+    --gray: #d3d3d3;
+    --border: #333333;
+    --headline: #fefefe;
+    --primary: #8800ff;
+    --primary-hover: #6c00ca;
+    --background: #111315;
+    --secondary: #262626;
+    --secondary-hover: #383838;
+    --dropzone-border: #fefefe;
+    --dropzone-background: #1a1c1e;
+    --dropzone-over: var(--secondary);
+}
+
+/* Body styling */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    color: var(--text);
+    background-color: var(--background);
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Text selection styling */
+*::selection {
+    color: var(--btn-text);
+    background-color: var(--primary);
+}
+
+/* Dropzone container styling */
+.dropzone-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    width: 100%;
+    max-width: 36rem;
+    border-radius: 1rem;
+    border: 1px solid var(--dropzone-border);
+    background-color: var(--dropzone-background);
+}
+
+/* Heading and paragraph styling within the dropzone container */
+.dropzone-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: .6rem;
+    color: var(--headline);
+}
+
+.dropzone-container p {
+    color: var(--gray);
+    font-size: 1.15rem;
+}
+
+/* Dropzone area styling */
+.dropzone-area {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    min-height: 16rem;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all .3s ease;
+    border: 2px dashed var(--dropzone-border);
+}
+
+/* Input file styling */
+.dropzone-area [type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* File upload icon styling */
+.dropzone-area .file-upload-icon {
+    height: 6rem;
+    width: 6rem;
+    max-width: 100%;
+    margin-bottom: .5rem;
+    stroke: var(--headline);
+    stroke: fill;
+}
+
+/* Dropzone hover styling */
+.dropzone-area:hover {
+    background-color: var(--dropzone-over);
+}
+
+/* Dropzone over styling */
+.dropzone--over {
+    border: 2px solid var(--primary);
+    background-color: var(--dropzone-over);
+}
+
+/* Dropzone actions styling */
+.dropzone-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+/* Button styling within dropzone actions */
+.dropzone-actions button {
+    border: none;
+    flex-grow: 1;
+    min-height: 3rem;
+    font-size: 1.2rem;
+    transition: background .3s ease;
+}
+
+/* Reset button styling */
+.dropzone-actions button[type="reset"] {
+    cursor: pointer;
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--border);
+    background-color: var(--secondary);
+}
+
+.dropzone-actions button[type="reset"]:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* Submit button styling */
+.dropzone-actions button[type="submit"] {
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+}
+
+.dropzone-actions button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}

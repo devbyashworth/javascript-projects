@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="uploadArea" class="upload-area">
+        <!-- HEADER AREA  -->
+        <div class="header">
+            <h1 class="title">Upload Your File</h1>
+        </div>
+        <!-- END HEADER AREA  -->
+
+        <!-- FILE UPLOAD AREA  -->
+        <div id="dropZone" class="upload-area-drop-zone drop-zone">
+            <span class="drop-zone-icon">
+                <i class='fas fa-file-upload'></i>
+            </span>
+            <p class="drop-zone-paragraph">Drag and Drop your file or Click to browse</p>
+            <span id="loadingText" class="drop-zone-loading-text">Please wait</span>
+            <div id="previewFile" class="drop-zone-preview-file">
+                <img id="previewImage" class="drop-zone-preview-img" alt="File Preview" />
+            </div>
+            <input type="file" name="file" id="fileInput" class="drop-zone-file-input" accept="*/*">
+        </div>
+        <!-- END FILE UPLOAD AREA  -->
+
+        <!-- FILE DETAILS  -->
+        <div id="fileDetails" class="upload-area-file-details file-details">
+            <h3 class="file-details-title">Uploaded File</h3>
+            <div id="uploadedFile" class="uploadedFile">
+                <div class="uploaded-file-icon-container">
+                    <i class="fa-solid fa-upload uploaded-file-icon"></i>
+                    <span class="uploaded-file-icon-text"></span>
+                </div>
+                <div id="uploadedFileInfo" class="uploaded-file-info">
+                    <span class="uploaded-file-name">Project 1</span>
+                    <span class="uploaded-file-counter">0%</span>
+                </div>
+            </div>
+        </div>
+        <!-- END FILE DETAILS  -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
