@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="filter-buttons" id="filter-buttons">
+            <button class="btn active" data-filter="all">Show all</button>
+            <button class="btn" data-filter="cities">Cities</button>
+            <button class="btn" data-filter="cars">Cars</button>
+            <button class="btn" data-filter="nature">Nature</button>
+            <button class="btn" data-filter="landmarks">Landmarks</button>
+            <button class="btn" id="shuffle-button">Shuffle</button>
+        </div>
+
+        <div class="filterable-cards" id="filterable-cards">
+            <div class="card" data-name="cities">
+                <img src="images/apocalypse-city.jpg" alt="Apocalypse City">
+                <div class="card-body">
+                    <h1 class="card-title">Apocalypse City</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="nature">
+                <img src="images/autumn-fall.jpg" alt="Autumn Fall">
+                <div class="card-body">
+                    <h1 class="card-title">Autumn Fall</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cars">
+                <img src="images/bentley.jpg" alt="Bentley">
+                <div class="card-body">
+                    <h1 class="card-title">Bentley</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="nature">
+                <img src="images/canyon-mountain.jpg" alt="Canyon Mountain">
+                <div class="card-body">
+                    <h1 class="card-title">Canyon Mountain</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cars">
+                <img src="images/classic-mustang.jpg" alt="Classic Mustang">
+                <div class="card-body">
+                    <h1 class="card-title">Classic Mustang</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="nature">
+                <img src="images/dock.jpg" alt="Dock">
+                <div class="card-body">
+                    <h1 class="card-title">Dock</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cities">
+                <img src="images/dubai-city.jpg" alt="Dubai">
+                <div class="card-body">
+                    <h1 class="card-title">Dubai</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="landmarks">
+                <img src="images/eiffel-tower.jpg" alt="Eiffel Tower">
+                <div class="card-body">
+                    <h1 class="card-title">Eiffel Tower</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="landmarks">
+                <img src="images/great-wall-of-china.jpg" alt="Great Wall of China">
+                <div class="card-body">
+                    <h1 class="card-title">Great Wall of China</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="landmarks">
+                <img src="images/london.jpg" alt="Big Ben">
+                <div class="card-body">
+                    <h1 class="card-title">Big Ben</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cars">
+                <img src="images/mustang.jpg" alt="Mustang">
+                <div class="card-body">
+                    <h1 class="card-title">Mustang</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cities">
+                <img src="images/new-york-city-central-park.jpg" alt="New York City Central Park">
+                <div class="card-body">
+                    <h1 class="card-title">New York City Central Park</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cars">
+                <img src="images/roll-royce.jpg" alt="Rolls Royce">
+                <div class="card-body">
+                    <h1 class="card-title">Rolls Royce</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="landmarks">
+                <img src="images/statue-of-liberty.jpg" alt="Statue of Liberty">
+                <div class="card-body">
+                    <h1 class="card-title">Statue of Liberty</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="landmarks">
+                <img src="images/taj-mahal.jpg" alt="Taj Mahal">
+                <div class="card-body">
+                    <h1 class="card-title">Taj Mahal</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cities">
+                <img src="images/tokyo-japan.jpg" alt="Tokyo">
+                <div class="card-body">
+                    <h1 class="card-title">Tokyo</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="nature">
+                <img src="images/trees-foggy-road.jpg" alt="Trees Foggy Road">
+                <div class="card-body">
+                    <h1 class="card-title">Trees Foggy Road</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="card" data-name="cars">
+                <img src="images/vintage-car.jpg" alt="Vintage Car">
+                <div class="card-body">
+                    <h1 class="card-title">Vintage Car</h1>
+                    <p class="card-text">Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

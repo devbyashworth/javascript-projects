@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fefefe;
+    font-family: "Ubuntu", sans-serif;
+    background-color: hsl(0, 0%, 12%);
+}
+
+.container {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filter-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.filter-buttons .btn {
+    font-size: 16px;
+    padding: 8px 15px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: transparent;
+    background-color: #fefefe;
+}
+
+.filter-buttons .btn:hover {
+    background-color: #dddddd;
+}
+
+.filter-buttons .btn.active {
+    color: #fefefe;
+    background-color: #333333;
+}
+
+.filterable-cards {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 8px;
+    gap: 10px;
+}
+
+.filterable-cards .card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.filterable-cards .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.filterable-cards .card:hover{
+    border: 1px solid rgba(0, 0, 0, .6);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, .6);
+}
+
+.filterable-cards .card:hover .card-body {
+    background: rgba(0, 0, 0, .6);
+}
+
+.filterable-cards .card .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    padding: 12px 8px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.card-body .card-title {
+    font-size: 18px;
+}
+
+.card-body .card-text {
+    margin-top: 5px;
+}
+
+.filterable-cards .card.hide {
+    opacity: .5;
+    filter: blur(5px);
+    pointer-events: none; 
+}
+
+@media screen and (max-width: 600px) {
+    .filterable-cards {
+        justify-content: center;
+    }
+    .filterable-cards .card {
+        width: calc(100% / 2 - 10px);
+    }
+} 
