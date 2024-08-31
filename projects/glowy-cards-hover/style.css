@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    min-height: 100vh;
+    line-height: 1.2;
+    color: #ddd;
+    background-color: #212121;
+}
+
+.main {
+    max-width: 75rem;
+    padding: 3em 1.5em;
+}
+
+.main .main-heading {
+    color: #eceff1;
+    font-weight: 600;
+    font-size: 2.25em;
+    text-align: center;
+    margin-bottom: .75em;
+}
+
+.main .cards {
+    position: relative;
+}
+
+.cards .cards-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+.cards-inner .card {
+    --flow-space: 0.5em;
+    --hsl: var(--hue), var(--saturation), var(--lightness);
+    display: grid;
+    align-items: start;
+    grid-template-rows: auto auto auto 1fr;
+    background-color: #2b2b2b;
+    border: 1px solid #eceff1;
+    border-radius: 15px;
+    padding: 1.5rem 2em;
+    color: #eceff1;
+    flex: 1 1 14rem;
+    gap: 1.25em;
+}
+
+.cards-inner .card ul {
+    list-style: none;
+}
+
+.card:nth-child(1) { 
+    --hue: 165;
+    --saturation: 82.26%;
+    --lightness: 51.37%;
+}
+.card:nth-child(2) { 
+    --hue: 291.34;
+    --saturation: 95.9%;
+    --lightness: 61.76%;
+}
+.card:nth-child(3) { 
+    --hue: 338.69;
+    --saturation: 100%;
+    --lightness: 48.04%;
+}
+
+.card .card-heading {
+    font-weight: 600;
+    font-size: 1.05em;
+}
+
+.card .card-price {
+    font-weight: 700;
+    font-size: 1.75em;
+}
+
+.card .card-bullets {
+    line-height: 1.4;
+}
+
+.card .card-bullets li::before {
+    display: inline-block;
+    margin-right: 1ch;
+    transform: translateY(0.25ch);
+}
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1.25em);
+}
+
+.card .btn {
+    display: block;
+    align-self: end;
+    text-align: center;
+    text-decoration: none;
+    margin: 2em 0 0.5em 0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.7em;
+    color: #fefefe;
+    background-color: #0d0d0d;
+}
+
+.cards .overlay {
+    position: absolute;
+    inset: 0;
+    user-select: none;
+    pointer-events: none;
+    opacity: var(--opacity, 0);
+    will-change: mask;
+    mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000000 1%, transparent 50%);
+    --webkit-mask: radial-gradient(25rem 25rem at var(--x) var(--y), #000000 1%, transparent 50%);
+    transition: 400ms mask ease;
+}
+
+.overlay .card {
+    border-color: hsla(var(--hsl), 1);
+    background-color: hsla(var(--hsl), .15);
+    box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+}
+
+.overlay .btn {
+    display: block;
+    grid-row: -1;
+    width: 100%;
+    background-color: hsl(var(--hsl));
+    box-shadow: 0 0 0 1px hsl(var(--hsl));
+}
+
+:not(.overlay) > .card {
+    will-change: background;
+    transition: 400ms background ease;
+}
+
+:not(.overlay) > .card:hover {
+    --lightness: 95%;
+    background-color: hsla(var(--hsl), .1);
+}
