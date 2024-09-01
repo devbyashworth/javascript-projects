@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:400|Jura:400");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    cursor: default;
+    overflow: hidden;
+    color: #000000;
+    font-family: "Jura";
+    background-color: #fefefe;
+}
+
+h2 {
+    padding-bottom: 15px;
+}
+
+.horizontal-window {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+}
+
+.intro {
+    width: 100vw;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.intro-content {
+    padding: 50px;
+    flex-shrink: 0;
+    color: #fefefe;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 550px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 400px;
+    gap: 50px;
+    padding: 0 50px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    height: 2px;
+    width: calc(100% - 100px);
+    background-color: #cccccc;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.card:hover .upper,
+.card:hover .lower {
+    transform: translateY(0);
+}
+
+.upper {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fefefe;
+    z-index: 3;
+    font-size: 25px;
+    font-weight: bolder;
+    transform: translateY(100px);
+    transition: 0.3s ease-in-out;
+}
+
+.year {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.lower {
+    position: relative;
+    z-index: 2;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+    background-color: #fefefe;
+    transform: translateY(-100px);
+    transition: 0.3s ease-in-out;
+}
+
+.lower p {
+    text-align: center;
+}
+
+.card1 {
+    background-color: #FF6961;
+}
+
+.card2 {
+    background-color: #A8E4A0;
+}
+
+.card3 {
+    background-color: #8bd7f6;
+}
+
+.card4 {
+    background-color: #9db4c4;
+}
+
+.card5 {
+    background-color: #98e8cd;
+}
+
+.card6 {
+    background-color: #f98f93;
+}
+
+.card7 {
+    background-color: #90eae0;
+}
+
+.card8 {
+    background-color: #fcdf94;
+}
