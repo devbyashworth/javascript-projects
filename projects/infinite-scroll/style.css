@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+:root {
+    --gap: 16px;
+    --fs-header: 36px;
+    --scroll-section-width: 100vw;
+    --calc-scroll-section-width: calc(var(--scroll-section-width) + var(--gap));
+}
+
+@media screen and (min-width: 458px) {
+    :root {
+        --gap: 0px;
+        --_scroll-section-width: 100vw;
+        --calc-scroll-section-width: var(--_scroll-section-width);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--gap);
+    overflow: hidden;
+    width: 100%;
+}
+
+.container:hover .scroll-section {
+    animation-play-state: paused;
+}
+
+.container .scroll-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    min-width: 100vw;
+    color: #cccccc;
+    width: max-content;
+    animation: scroll 10s linear infinite;
+}
+
+.scroll-section h1 {
+    pointer-events: none;
+    font-size: var(--fs-header);
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(var(--calc-scroll-section-width) * -1));
+    }
+}
