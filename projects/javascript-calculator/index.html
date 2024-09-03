@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calc">
+        <div class="calc-screen">
+            <div id="secondaryDisplay">0</div>
+            <div id="primaryDisplay">0</div>
+        </div>
+        <div class="calc-body">
+            <div class="flex">
+                <div class="col btn btn-num" data-value="7">7</div>
+                <div class="col btn btn-num" data-value="8">8</div>
+                <div class="col btn btn-num" data-value="9">9</div>
+                <div class="col btn btn-operator" data-value="*">&times;</div>
+            </div>
+            <div class="flex">
+                <div class="col btn btn-num" data-value="4">4</div>
+                <div class="col btn btn-num" data-value="5">5</div>
+                <div class="col btn btn-num" data-value="6">6</div>
+                <div class="col btn btn-operator" data-value="/">&divide;</div>
+            </div>
+            <div class="flex">
+                <div class="col btn btn-num" data-value="1">1</div>
+                <div class="col btn btn-num" data-value="2">2</div>
+                <div class="col btn btn-num" data-value="3">3</div>
+                <div class="col btn btn-operator" data-value="-">&minus;</div>
+            </div>
+            <div class="flex">
+                <div class="col btn btn-clear" data-value="c">c</div>
+                <div class="col btn btn-num" data-value="0">0</div>
+                <div class="col btn btn-num btn-dot" data-value=".">.</div>
+                <div class="col btn btn-operator" data-value="+">&plus;</div>
+            </div>
+            <div class="flex">
+                <div class="col btn btn-equals" data-value="=">&equals;</div>
+            </div>
+        </div>
+    </div>
+    <div class="flex developer">
+        <p class="copyright">
+            Developed By <a href="https://github.com/Ashworth836" target="_blank">Ashworth Sakara</a>
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
