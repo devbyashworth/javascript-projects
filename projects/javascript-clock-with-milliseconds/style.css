@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #2d2d2d;
+}
+
+#timedate {
+    width: 50%;
+    padding: 20px;
+    color: #fefefe;
+    text-align: left;
+    margin: 40px auto;
+    border-left: 3px solid #ed1f24;
+    font: small-caps lighter 43px/150% "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
