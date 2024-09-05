@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><a href="#">Animal Kingdom</a></div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Biology</a></li>
+                    <li><a href="#">Protection</a></li>
+                    <li><a href="#">Appearance</a></li>
+                    <li><a href="#">Characteristics</a></li>
+                </ul>
+            </nav>
+
+            <div class="menus">
+                <svg class="w-6 h-6" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z">
+                    </path>
+                </svg>
+                <div class="hamb-menu"></div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Grizzly bear</h1>
+                <p>A subspecies of brown bear that lives mainly in the higher parts of North America. It probably comes
+                    from the Ussuri bear, which moved from Siberia to Alaska about 100,000 years ago, but did not travel
+                    south until thirteen thousand years ago.</p>
+                <span>Play video <svg class="w-6 h-6" fill="currentColor" onclick="toggleModal()" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                            clip-rule="evenodd"></path>
+                    </svg></span>
+            </div>
+            <div class="interest">
+                Grizzly, which could be interpreted as either "grizzly" (i.e., "grizzled"—that is, with grey-tipped or
+                silver-tipped hair)
+            </div>
+        </div>
+    </main>
+
+    <div id="popup">
+        <div class="iframe-container">
+            <iframe width="720" height="480" src="https://www.youtube.com/embed/TSSPDwAQLXs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <svg class="close" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" onclick="toggleModal()">
+            <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
