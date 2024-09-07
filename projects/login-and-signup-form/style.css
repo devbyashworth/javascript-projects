@@ -1,0 +1,164 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fefefe;
+    background-color: #1b1b1b;
+    font-family: "Ubuntu", sans-serif;
+}
+
+main {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px auto 0;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+main > * { grid-row: 1 / 2; }
+
+/* Login and Signup Sections */
+.login,
+.signup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    font-size: 23px;
+    color: #fefefe;
+    padding: 40% 10px;
+    background-color: #3b3b3b;
+}
+
+.login button,
+.signup button {
+    border: none;
+    color: #fefefe;
+    background-color: #1b1b1b;
+}
+
+.login button:hover,
+.signup button:hover {
+    color: #1b1b1b;
+    border: 1px solid #1b1b1b;
+    background-color: #fefefe;
+}
+
+.login { grid-column: 1 / 2; }
+.signup { grid-column: 2 / 3; }
+
+/* Back Layer (Forms) */
+.back-layer {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-template-columns: 1fr 1fr;
+    clip-path: inset(0 50% 0 0);
+    background-color: #3b3b3b;
+    z-index: 5;
+    transition: clip-path .3s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+    max-width: 500px;
+    z-index: 10;
+    transition: transform .5s;
+}
+
+form.active { transform: translateX(0); }
+
+.login-form {
+    grid-column: 1 / 2;
+    transform: translateX(-100%);
+}
+
+.signup-form {
+    grid-column: 2 / 3;
+    transform: translateX(100%);
+}
+
+form h2 {
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form p {
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 35px 0;
+    gap: 20px;
+}
+
+.social-container .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fefefe;
+    border: 1px solid #333333;
+}
+
+.social-container .icon:hover { border: 1px solid rgb(255, 0, 64); }
+
+label { font-size: 15px; }
+
+input {
+    display: block;
+    width: 360px;
+    height: 40px;
+    outline: none;
+    margin-top: 8px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1.5px solid #ccc;
+}
+
+input:focus { border-color: rgb(255, 0, 64); }
+
+button {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid;
+    margin: 12px auto;
+    border-radius: 4px;
+    color: rgb(255, 0, 64);
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+button:hover {
+    color: #fefefe;
+    background-color: rgb(255, 0, 64);
+}
