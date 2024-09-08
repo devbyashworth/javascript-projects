@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logins Password Visibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-card">
+        <h2>Login</h2>
+        <h3>Enter your credentials</h3>
+        <form action="" class="login-form">
+            <div class="input-group">
+                <input type="text" name="username" id="username" class="control" placeholder="Username">
+            </div>
+            <div class="input-group password">
+                <input type="password" name="password" id="password" class="control" placeholder="Password">
+                <button type="button" class="toggle" onclick="togglePassword(this)"></button>
+            </div>
+            <button type="submit" class="control">LOGIN</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
