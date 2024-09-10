@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Now Playing</span>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="img-area">
+            <img src="" alt="" class="album">
+        </div>
+
+        <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-bar">
+                <audio src="" id="main-audio"></audio>
+            </div>
+            <div class="song-timer">
+                <span class="current-time">0:00</span>
+                <span class="maximum-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i class="fa-solid fa-repeat" id="repeat-music" title="Playlist looped"></i>
+            <i class="fa-solid fa-backward" id="prev"></i>
+            <div class="play-pause">
+                <i class="fa-solid fa-play" id="play"></i>
+            </div>
+            <i class="fa-solid fa-forward" id="next"></i>
+            <i class="fa-solid fa-music" id="more-music"></i>
+        </div>
+
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i class="fa-solid fa-music"></i>
+                    <span>Music List</span>
+                    <i class="fa-solid fa-xmark" id="close"></i>
+                </div>
+            </div>
+            <ul>
+                <!-- Music list will be inserted here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
