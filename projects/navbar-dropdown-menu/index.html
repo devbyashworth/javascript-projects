@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a class="dropdown-button" href="#" onmouseenter="toggleMenuOpen(true)" onmouseleave="toggleMenuOpen(false)">
+            Skills
+            <span><i class="fa-solid fa-angle-down"></i></span>
+        </a>
+        <a href="#"><span>About</span></a>
+        <a href="#"><span>Portfolio</span></a>
+    </nav>
+    <div class="menu" onmouseenter="toggleMenuOpen(true)" onmouseleave="toggleMenuOpen(false)">
+        <div class="menu-buttons">
+            <button type="button" onclick="toggleMenuBlock(this, 0)">
+                <span><i class="fa-solid fa-cube"></i></span>
+                Coding
+            </button>
+            <button type="button" onclick="toggleMenuBlock(this, 1)">
+                <span><i class="fa-solid fa-palette"></i></span>
+                Design
+            </button>
+            <button type="button" onclick="toggleMenuBlock(this, 2)">
+                <span><i class="fa-solid fa-server"></i></span>
+                DevOps
+            </button>
+        </div>
+        <div id="menuContent" class="menu-content">
+            <div class="menu-block">
+                <p>React</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>TypeScript</p>
+                <p>ECMAScript</p>
+                <p>Python</p>
+                <p>Java</p>
+                <p>SQL</p>
+            </div>
+            <div class="menu-block">
+                <p>Figma</p>
+                <p>Photoshop</p>
+                <p>Adobe XD</p>
+                <p>Sketch</p>
+                <p>InVision</p>
+                <p>EdrawMax</p>
+                <p>After Effect</p>
+                <p>Jitter</p>
+                <p>Spline</p>
+            </div>
+            <div class="menu-block">
+                <p>Netlify</p>
+                <p>Vercel</p>
+                <p>Heroku</p>
+                <p>GitHub</p>
+                <p>Git</p>
+                <p>Bitbucket</p>
+                <p>npm</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home" class="logo">Portfolio</a>
+        <div class="nav-items">
+            <a href="#profile">Profile</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <span class="settings"><i class="fa-solid fa-gears"></i>Settings</span>
+    </nav>
+    <div id="progress"></div>
+    <section class="container" id="home">
+        <video src="./assets/earth_.mp4" class="bg-video" autoplay muted loop></video>
+        <div class="content">
+            <h3 class="static-txt">Hi, I'm <span class="highlighter dynamic-txts"></span></h3>
+            <p>Self-taught and highly motivated software engineer with a passion for problem-solving and a strong foundation in various programming languages. Adept at learning new technologies quickly and delivering high-quality code. Proven ability to work independently and collaboratively in a team environment.</p>
+            <div class="links">
+                <a href="#" class="btn"><i class="fa-brands fa-envelop"></i></a>
+                <a href="#" class="btn"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="btn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section> 
+    <section class="container" id="profile">
+        <h2>Profile</h2>
+    </section>
+    <section class="container" id="skills">
+        <h2>Skills</h2>
+        <div class="scrollers">
+            <div class="scroller" data-duration="20s">
+                <ul class="skills-list scroller__inner">
+                    <li><img src="./assets/html5_html_icon.png">HTML5</li>
+                    <li><img src="./assets/css_fill_icon.png">CSS3</li>
+                    <li><img src="./assets/js_icon.png">JavaScript</li>
+                    <li><img src="./assets/git_icon.png">Git</li>
+                    <li><img src="./assets/github.png">GitHub</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/fluency/48/visual-studio-code-2019.png"/>Visual Studio</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/fluency/48/intellij-idea.png"/>IntelliJ IDE</li>
+                    <li><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/java-eclipse.png"/>Eclipse</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/fluency/48/android-studio--v3.png"/>Android Studio</li>
+                </ul>
+            </div>
+            <div class="scroller" data-duration="24s">
+                <ul class="skills-list scroller__inner"> 
+                    <li><img src="./assets/python_icon.png">Python</li>
+                    <li><img src="./assets/node_js_icon.png">Node.js</li>
+                    <li><img src="./assets/java_icon.png">Java</li>
+                    <li><img src="./assets/mysql_icon.png">MySQL</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/color/48/postgreesql.png"/>PostgreSQL</li>
+                    <li><img src="./assets/oracle_icon.png">Oracle</li>
+                    <li><i class="fa-brands fa-"></i> MongoDB</li>
+                </ul>
+            </div>
+            <div class="scroller" data-duration="22s">
+                <ul class="skills-list scroller__inner">
+                    <li><img src="./assets/windows_social_icon.png">Windows</li>
+                    <li><img src="./assets/apple.png">iOS</li>
+                    <li><img src="./assets/linux_icon.png">Linux</li>
+                    <li><img src="./assets/react_icon.png">React</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/color/48/django.png"/>Django</li>
+                    <li><img width="48" height="48" src="https://img.icons8.com/color/48/flask.png"/>Flask</li>
+                    <li><img src="./assets/docker_icon.png">Docker</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container" id="contact">Contact</section> 
+    <script src="script.js"></script>
+</body>
+</html>

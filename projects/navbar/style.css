@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #f9f9f9;
+    background-color: #1b1b1b;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 20px 40px;
+    font-variant: small-caps;
+    background-color: hsl(0, 0%, 12%);
+    background-color: rgba(0, 0, 0, .4);
+}
+
+nav .logo {
+    color: #fefefe;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 0 36px;
+}
+
+nav .nav-items a {
+    color: #999999;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav .nav-items a:hover { color: #fefefe; }
+
+nav .settings {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav .settings:hover { color: #999999; }
+
+#progress {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(230, 6%, 58%);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    font-size: 30px;
+    color: #1b1b1b;
+    text-align: center;
+    background-color: #333333;
+}
+
+.container .bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container#home .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    gap: .8rem;
+    z-index: 9;
+    color: #f2f5f5;
+    text-align: left;
+    padding: 8px 25px;
+    font-variant: small-caps;
+    background-color: transparent;
+}
+
+#home .content .highlighter {
+    color: rgb(219, 78, 63);
+}
+
+#home .content p {
+    font-size: 16px;
+}
+
+#home .content .links {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+#home .content .links .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 20px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    transition: all .5s ease;
+}
+
+#home .content .links .btn:hover {
+    color: #fefefe;
+    background-color: #333333;
+}
+
+.container#skills {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scrollers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.7rem 1rem;
+    overflow: hidden;
+    mask: linear-gradient(90deg, transparent, #333333 6%, #333333 94%, transparent);
+    --webkit-mask: linear-gradient(90deg, transparent, #333333 6%, #333333 94%, transparent);
+    /* background: linear-gradient(90deg, #333333, transparent 10%, transparent 90%, #333333); */
+}
+
+.scroller {
+    position: relative;
+    /* max-width: 1200px; */
+    width: 100%;
+    max-width: 96vw;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.scroller__inner {
+    gap: 4rem;
+    width: 100%;
+    display: flex;
+    padding: 1.5rem 0;
+    flex-wrap: nowrap;
+    animation: scroll forwards linear infinite;
+}
+
+
+.scroller__inner li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    padding: 12px 15px;
+    list-style: none;
+    color: #171717;
+    font-size: 30px;
+}
+
+.scroller__inner li img {
+    width: 38px;
+    height: 38px;
+    margin-right: 6px;
+    object-fit: cover;
+}
+
+.scroller[data-duration="20s"] .scroller__inner { animation-duration: 20s; }
+.scroller[data-duration="24s"] .scroller__inner { animation-duration: 24s; }
+.scroller[data-duration="22s"] .scroller__inner { animation-duration: 22s; }
+
+@keyframes scroll { 
+    to { 
+        transform: translate(calc(-50% - .5rem)); 
+    } 
+}
+
+/* @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+} */
