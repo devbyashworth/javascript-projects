@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #f9f9f9;
+    overflow: hidden;
+    background-color: #1b1b1b;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 80px;
+    padding: 20px 0;
+    background-color: #333333;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fefefe;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color .5s;
+}
+
+.nav li:hover,
+.nav li:focus,
+.nav li.active {
+    color: #999999;
+}
+
+.page {
+    display: none;
+    color: #fefefe;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    background-color: #333333;
+}
+
+.page.active {
+    display: flex;
+}
+
+.page h1 {
+    margin-top: 0;
+    font-weight: 100;
+}
+
+.page-hideAnimation {
+    animation: hidePage 1s;
+    transform-origin: 0 100%;
+}
+
+.page-showAnimation {
+    animation: hidePage 1s reverse;
+    transform-origin: 0 100%;
+}
+
+@keyframes hidePage {
+    50% {
+        margin-top: -10%;
+        margin-right: -10%;
+        margin-left: -350px;
+        transform: rotate(10deg);
+    }
+    100% {
+        margin-top: 100vh;
+        margin-right: 10%;
+        margin-left: -350px;
+        transform: rotate(10deg);
+    }
+}
