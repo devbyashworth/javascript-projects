@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Password Generator</h1>
+        <div class="result-container">
+            <textarea name="passwordResult" id="passwordResult" readonly></textarea>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label for="length">Password Length</label>
+                <input type="number" name="length" id="length">
+            </div>
+            <div class="setting">
+                <label for="numbers">Include Numbers</label>
+                <input type="checkbox" name="numbers" id="numbers">
+            </div>
+            <div class="setting">
+                <label for="symbols">Include Symbols</label>
+                <input type="checkbox" name="symbols" id="symbols">
+            </div>
+            <div class="setting">
+                <label for="uppercase">Include Uppercase Letters</label>
+                <input type="checkbox" name="uppercase" id="uppercase">
+            </div>
+            <div class="setting">
+                <label for="lowercase">Include Lowercase Letters</label>
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-large" id="generate">
+                <i class="fas fa-key"></i> Generate
+            </button>
+            <button class="btn" id="clipboard">
+                <i class="fas fa-clipboard"></i> Copy
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

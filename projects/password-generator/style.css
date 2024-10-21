@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #E1DFE9;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 280px;
+    height: 350px;
+    padding: 10px;
+    margin: 25px auto;
+    border-radius: 4px;
+    background-color: #f2f5f5;
+    border: 1px solid #f2f5f5;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.result-container {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    position: relative;
+    font-size: 18px;
+    height: 45px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-top: auto;
+    border-radius: 3px;
+    color: #f2f5f5;
+    /* background-color: rgba(0, 0, 0, 0.09); */
+    background-color: #1b1b1b;
+}
+
+.settings {
+    margin-top: 10px;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.setting label {
+    font-size: 15px;
+    align-items: center;
+}
+
+.setting input[type="checkbox"] {
+    width: 20px;
+    height: 16px;
+    align-items: center;
+}
+
+.setting input[type="number"] {
+    width: 45px;
+    height: 20px;
+    outline: none;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.buttons .btn {
+    cursor: pointer;
+    font-size: 14px;
+    margin: 7px 5px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #121212;
+}
+
+#generate:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    min-height: 100vh;
+    background-color: #091a20;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-container {
+    width: 300px;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #215164;
+    background-color: #112d37;
+    transition: width .9s, height .9s, border-radius .9s;
+}
+
+.input-group input::placeholder {
+    color: #346a80;
+}
+
+.input-group input:focus {
+    border: 1px solid #55b7dd;
+    box-shadow: 0px 0px 2px 2px #55b7dd34;
+}
+
+.input-group .toggle {
+    position: absolute;
+    right: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 25px;
+    user-select: none;
+}
+
+.input-group .ripple {
+    position: absolute;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    display: block;
+    border-radius: 50%;
+    transition: all .2s;
+    background-color: #fefefe;
+}
+
+.password-strength {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.strength-label {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.strength-percent {
+    flex: 1;
+    height: 5px;
+    display: block;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
+
+.strength-percent span {
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+    transition: all .4s;
+}
+
+.weak {
+    width: 33%;
+    background-color: red;
+}
+
+.average {
+    width: 66%;
+    background-color: #ffd000;
+}
+
+.strong {
+    width: 100%;
+    background-color: green;
+}
