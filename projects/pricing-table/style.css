@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f8f8f8;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 0;
+    text-align: center;
+    max-width: min(87.5rem, 90%);
+}
+
+h2 {
+    color: #1b1b1b;
+    font-size: 2rem;
+    margin-bottom: 1.563rem;
+    text-transform: capitalize;
+}
+
+h3 {
+    color: #1b1b1b;
+    font-size: 1.1rem;
+    letter-spacing: 0.063rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1rem;
+    color: #1b1b1b;
+    max-width: 50rem;
+    margin-inline: auto; 
+}
+
+.pricing-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pricing-card {
+    position: relative;
+    text-align: center;
+    flex: 1 1 18.75rem;
+    padding: 2.5rem 2rem;
+    cursor: pointer;
+    height: 560px;
+    border-radius: 0.625rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card .card-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.563rem 0;
+    font-weight: bold;
+    color: #1b1b1b;
+    font-size: 3rem;
+}
+
+.pricing-card .card-price span {
+    color: #1b1b1b;
+    font-size: 1.1rem;
+    margin-right: 0.625rem;
+}
+
+.pricing-card .card-btn {
+    opacity: 0;
+    color: #1b1b1b;
+    font-size: 0.9rem;
+    font-weight: bold;
+    visibility: hidden;
+    display: inline-block;
+    padding: 0.5rem 1.875rem;
+    text-transform: uppercase;
+    background-color: #d6d4d3;
+    transition: opacity 0.3s ease-in;
+}
+
+.pricing-card.active {
+    color: #a3a3a3;
+    background-color: #1b1b1b;
+}
+
+.pricing-card.active li {
+    font-size: 1.063rem;
+}
+
+.pricing-card.active .ribbon {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pricing-card.active:hover .card-btn {
+    background-color: #fefefe;
+}
+
+.pricing-card.active hr {
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pricing-card.active h3 {
+    color: #d6d4d3;
+}
+
+.pricing-card.active .card-price span {
+    color: #d6d4d3;
+}
+
+.pricing-card.active .card-price {
+    color: #fefefe;
+}
+
+.pricing-card.active .card-btn {
+    opacity: 1;
+    color: #1b1b1b;
+    visibility: visible;
+    margin-top: 2.813rem;
+    background-color: #d6d4d3;
+}
+
+.pricing-card .ribbon {
+    position: absolute;
+    top: -0.625rem;
+    left: 1.563rem;
+    opacity: 0;
+    width: 2.5rem;
+    height: 6.875rem;
+    visibility: hidden;
+    background-color: #b62828;
+    transition: opacity 0.3s ease-in;
+}
+
+.ribbon > div {
+    color: #fefefe;
+    font-weight: bold;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+.ribbon svg {
+    width: 0.625rem;
+    color: #1b1b1b;
+}
+
+.ribbon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.563rem;
+    border-top: 0.313rem solid transparent;
+    border-right: 0.313rem solid transparent;
+    border-bottom: 0.313rem solid #b62828;
+    border-left: 0.313rem solid #b62828;
+}
+
+.ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -0.063rem;
+    left: 0;
+    border-top: 1.25rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-bottom: 1.25rem solid #1b1b1b;
+    border-left: 1.25rem solid transparent;
+}
+
+.pricing-card hr {
+    width: 35%;
+    margin: 0 auto;
+    display: block;
+    visibility: visible;
+    margin-top: 1.875rem;
+    margin-bottom: 1.563rem;
+}
+
+.pricing-card hr.first {
+    border: none;
+    height: 0.156rem;
+    background-color: #d6d4d3;
+}
+
+.pricing-card hr.second {
+    border: none;
+    height: 0.25rem;
+    background-color: #1b1b1b;
+}
+
+ul { 
+    list-style: "🕸️ ";
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    font-size: 1rem;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+ul li + li { 
+    margin-top: 0.375rem; 
+}
+
+a { 
+    text-decoration: none; 
+}
