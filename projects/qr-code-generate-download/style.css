@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10px;
+    background-color: #1a1a1a;
+    color: #fefefe;
+}
+
+.container {
+    max-width: 440px;
+    border-radius: 7px;
+    padding: 20px 25px 0;
+    background-color: #222;
+    transition: height 0.2s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fefefe;
+}
+
+header p {
+    color: #aaa;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.container .qr-form {
+    margin: 20px 0 25px;
+}
+
+.qr-form input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fefefe;
+    padding: 0 17px;
+    border: 1px solid #999;
+    background-color: #333;
+    transition: box-shadow 0.1s ease;
+}
+
+.qr-form input:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.qr-form input::placeholder {
+    color: #999;
+}
+
+.qr-form .qr-button {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.1s ease;
+}
+
+.qr-form button {
+    width: 45%;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fefefe;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: #444;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.qr-form button:hover {
+    background-color: #333;
+}
+
+.qr-form button:active {
+    transform: scale(0.95);
+}
+
+.qr-code {
+    opacity: 0;
+    display: none;
+    padding: 33px 0;
+    border-radius: 4px;
+    pointer-events: none;
+    border: 1px solid #ccc;
+}
+
+.container.active .qr-code {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    pointer-events: auto;
+    justify-content: center;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+@media screen and (max-width: 430px) {
+    .container {
+        height: 255px;
+        padding: 16px 20px;
+    }
+
+    header p {
+        color: #696969;
+    }
+
+    .qr-form input,
+    .qr-form button {
+        height: 52px;
+    }
+
+    .qr-code img {
+        width: 160px;
+    }
+}

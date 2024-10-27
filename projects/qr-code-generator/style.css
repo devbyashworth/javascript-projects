@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0px 10px;
+    color: #fefefe;
+}
+
+.container {
+    height: 265px;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 20px 25px 0;
+    background-color: #222;
+    transition: height .2s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .4);
+}
+
+.container.active {
+    height: 530px;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fefefe;
+}
+
+header p {
+    color: #aaa;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.container .qr-form {
+    margin: 20px 0 25px;
+}
+
+.qr-form :where(input, button) {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    transition: .1s ease;
+} 
+
+.qr-form input {
+    font-size: 18px;
+    color: #fefefe;
+    padding: 0px 17px;
+    border: 1px solid #999;
+    background-color: #333;
+}
+
+.qr-form input:focus {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .13);
+}
+
+.qr-form input::placeholder {
+    color: #999;
+}
+
+.qr-form button {
+    cursor: pointer;
+    color: #fefefe;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: #444;
+    transition: background .3s ease, transform .2s ease;
+}
+
+.qr-form button:hover {
+    background-color: #333;
+}
+
+.qr-form button:active {
+    transform: scale(0.95);
+}
+
+.qr-code {
+    opacity: 0;
+    display: flex;
+    padding: 33px 0;
+    border-radius: 4px;
+    align-items: center;
+    pointer-events: none;
+    justify-content: center;
+    border-radius: 1px solid #ccc;
+}
+
+.container.active .qr-code {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .5s .05s ease;
+}
+
+.qr-code img {
+    width: 170px;
+}
+
+@media screen and (max-width= 430px) {
+    .container {
+        height: 255px;
+        padding: 16px 20px;
+    }
+    .container.active { height: 510px; }
+    header p { color: #696969; }
+    .qr-form :where(input, button) { height: 52px; }
+    .qr-code img { width: 160px; }
+}
