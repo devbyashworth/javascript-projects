@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000000;
+    background-image: url('https://raw.githubusercontent.com/rainner/codepen-assets/master/images/pinkish_sunset.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 170vh;
+    color: #f0f0f0;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: normal;
+    font-family: 'Denk One', Arial, sans-serif;
+}
+
+#stageElement {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.player,
+.instructions {
+    z-index: 100;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fa-solid {
+    color: inherit;
+    font-size: 320%;
+}
+
+.content {
+    margin-left: 1em;
+}
+
+/* Music Player */
+.player {
+    bottom: 1em;
+    left: 1em;
+}
+
+button {
+    font: inherit;
+    margin: 2px 0;
+    color: inherit;
+    font-size: 80%;
+    cursor: pointer;
+    padding: 2px 6px;
+    background: none;
+    border-radius: 4px;
+    line-height: 1.2em;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+button:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Instructions */
+.instructions {
+    right: 1em;
+    bottom: 1em;
+}
