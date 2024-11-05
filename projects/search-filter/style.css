@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    font-family: 'Poppins', sans-serif;
+    color: #fefefe;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    width: 750px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: #121212;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.search-container i {
+    position: absolute;
+    left: 20px;
+    font-size: 16px;
+    color: #707070;
+}
+
+.search-container input {
+    width: calc(100% - 40px);
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fefefe;
+    padding-left: 40px;
+    background-color: transparent;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#nothing-alert {
+    width: 100%;
+    height: 10px;
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 85px;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #333;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: populate 0.5s ease-out normal backwards;
+}
+
+.cards:hover {
+    z-index: 1;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    margin: 0;
+    font-size: 0.8em;
+    padding: 2px 4px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 786px) {
+    .search-container {
+        width: 50%;
+    }
+}
