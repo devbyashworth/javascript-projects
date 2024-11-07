@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <header>
+            <button type="button" onclick="toggleSidebar()">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <img src="./assets/Codecrafthub.png">
+        </header>
+        <ul class="menu">
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <p>Home</p>
+                </button>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-solid fa-gears"></i></span>
+                    <p>Settings</p>
+                    <span><i class="fa-solid fa-chevron-up"></i></span>
+                </button>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-display"></i></span>
+                                <p>Display</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-ghost"></i></span>
+                                Appearance
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-gear"></i></span>
+                                <p>Preferences</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-brands fa-creative-commons-remix"></i></span>
+                    <p>Create</p>
+                    <span><i class="fa-solid fa-chevron-up"></i></span>
+                </button>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-video"></i></span>
+                                <p>Video</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-newspaper"></i></span>
+                                <p>Article</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-file"></i></span>
+                                <p>Document</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-file-powerpoint"></i></span>
+                                <p>Presentation</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    <p>Profile</p>
+                    <span><i class="fa-solid fa-chevron-up"></i></span>
+                </button>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-palette"></i></span>
+                                <p>Theme</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-user-astronaut"></i></span>
+                                <p>avatar</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-brands fa-teamspeak"></i></span>
+                    <p>Management</p>
+                    <span><i class="fa-solid fa-chevron-up"></i></span>
+                </button>
+                <div class="sub-menu">
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-clock"></i></span>
+                                <p>Time Off</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-clock"></i></span>
+                                <p>Time Tracking</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-money-check-dollar"></i></span>
+                                <p>Expenses</p>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <span><i class="fa-solid fa-rss"></i></span>
+                                <p>Feedback</p>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-brands fa-product-hunt"></i></span>
+                    <p>Products</p>
+                </button>
+            </li>
+            <li>
+                <button type="button" onclick="onClick(this)">
+                    <span><i class="fa-solid fa-file-invoice"></i></span>
+                    <p>Account</p>
+                </button>
+            </li>
+        </ul>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
