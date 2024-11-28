@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+header .navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation a {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Inter";
+    color: #5c5b66;
+    transition: color .25s;
+}
+
+.navigation a.active {
+    color: #fefefe;
+}
+
+.navigation a:not(.active):hover {
+    color: #807e8c;
+}
+
+.navigation .active-element {
+    --active-element-scale-x: 1;
+    --active-element-scale-y: 1;
+    --active-element-show: 0;
+    --active-element-opacity: 0;
+    --active-element-width: 0px;
+    --active-element-strike-x: 0%;
+    --active-element-mask-position: 0%;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 36px;
+    height: 3px;
+    background-color: #fefefe;
+    opacity: var(--active-element-show);
+}
+
+.navigation .active-element .strike {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    opacity: var(--active-element-opacity);
+    width: var(--active-element-width);
+    mix-blend-mode: multiply;
+    padding: 24px 0;
+    mask-image: linear-gradient(to right, transparent calc(0% - var(--active-element-mask-position)), black calc(15% + var(--active-element-mask-position)), black 80%, transparent);
+}
+
+.navigation::before .active-element {
+    transform: rotateY(180deg);
+}
