@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="tabs-container">
+        <ul class="tabs-menu">
+            <li class="tab active"><a href="#technology">Technology</a></li>
+            <li class="tab"><a href="#fitness">Fitness</a></li>
+            <li class="tab"><a href="#food">Food</a></li>
+            <li class="tab"><a href="#travel">Travel</a></li>
+        </ul>
+
+        <div class="tab-panels">
+            <div id="technology" class="panel">
+                <h3>Technology</h3>
+                <p>Explore the world of technology...</p>
+                <input type="submit" value="Learn More">
+            </div>
+            <div id="fitness" class="panel" hidden>
+                <h3>Fitness</h3>
+                <p>Discover fitness tips and tricks...</p>
+                <input type="submit" value="Learn More">
+            </div>
+            <div id="food" class="panel" hidden>
+                <h3>Food</h3>
+                <p>Delve into culinary delights...</p>
+                <input type="submit" value="Learn More">
+            </div>
+            <div id="travel" class="panel" hidden>
+                <h3>Travel</h3>
+                <p>Embark on exciting adventures...</p>
+                <input type="submit" value="Learn More">
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

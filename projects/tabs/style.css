@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --primary: hsl(263, 81%, 45%);
+    --neutral: hsl(222, 23%, 91%);
+    --dark-text: hsl(250, 15%, 8%);
+    --light-text: hsl(240, 4%, 57%);
+    --background: hsl(225, 62%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--light-text);
+    background-color: var(--background);
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul, li, input { all: unset; }
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--white);
+}
+
+.tabs-container .tabs-menu {
+    display: flex;
+    width: 100%;
+}
+
+.tabs-menu .tab {
+    flex: 1;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: var(--neutral);
+}
+
+.tabs-menu .tab:not(:last-child) { border-right: var(--white); }
+
+.tabs-menu .tab.active { background-color: var(--white); }
+
+.tab a {
+    width: 100%;
+    height: 100%;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: var(--dark-text);
+}
+
+.tabs-menu .tab.active a { color: var(--primary); }
+
+.tabs-container .tab-panels { padding: 48px; }
+
+.tab-panels .panel h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+.tab-panels .panel p {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 28px;
+}
+
+.tab-panels .panel input {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: var(--white);
+    border-radius: 6px;
+    letter-spacing: 1px;
+    background-color: var(--dark-text);
+}
+
+.tab-panels .panel input:hover { 
+    opacity: 0.9; 
+    color: var(--dark-text);
+    background-color: var(--white);
+    border: 1px solid var(--dark-text);
+} 
