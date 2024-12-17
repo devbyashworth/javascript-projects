@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root { 
+    --h: 75px;
+    --base: 0;
+    --hours: 0;
+    --minutes: 0;
+    --seconds: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    overflow: hidden;
+    place-items: center;
+    background-color: #222222;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 75px;
+    gap: 5px;
+}
+
+main::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0,0,0,0.9) 44%, 
+    rgba(0,0,0,0) 48%, rgba(0,0,0,0) 53%, rgba(0,0,0,0.9) 57%);
+}
+
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+    list-style: none;
+    gap: 5px;
+}
+
+ul li {
+    width: 70px;
+    height: 70px;
+    font-size: 72px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bbbbbb;
+    background-color: #444444;
+    font-family: "MuseoModerno", sans-serif;
+}
+
+span {
+    width: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #bbbbbb;
+    font-weight: 900;
+    font-family: "MuseoModerno", sans-serif;
+}
+
+.hour-p {
+    translate: 0 calc(var(--h) * -9 + var(--hours-p) * var(--h));
+    transition: 0.5s ease-in;
+}
+.hour-a {
+    translate: 0 calc(var(--h) * -9 + var(--hours-a) * var(--h));
+    transition: 0.5s ease-in;
+}
+.minute-p {
+    translate: 0 calc(var(--h) * -9 + var(--minutes-p) * var(--h));
+    transition: 0.5s ease-in;
+}
+.minute-a {
+    translate: 0 calc(var(--h) * -9 + var(--minutes-a) * var(--h));
+    transition: 0.5s ease-in;
+}
+.second-p {
+    translate: 0 calc(var(--h) * -9 + var(--seconds-p) * var(--h));
+    transition: 0.5s ease-in;
+}
+.second-a {
+    translate: 0 calc(var(--h) * -9 + var(--seconds-a) * var(--h));
+    transition: 0.5s ease-in;
+}
