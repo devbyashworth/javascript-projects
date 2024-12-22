@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E1DFE9
+}
+
+.todo-app {
+    width: min(80%, 1024px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 10px;
+    border-radius: 4px;
+    background-color: #0c4a6e;
+}
+
+.todo-app h1 {
+    color: #fefefe;
+    padding-bottom: 20px;
+}
+
+.todo-app .todo-app__input-form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-app__input-form input {
+    width: 100%;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid #3b82f6;
+}
+
+.todo-app__list {
+    width: 80%;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.todo-app__list .task {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.task .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .circle {
+    height: 80%;
+    border: none;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #4a7e9c;
+}
+
+.task .close-icon {
+    z-index: 9;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: rgb(255, 255, 255);
+}
+
+.task .completed .container .circle {
+    background-color: #3b82f6;
+}
+.container .span {
+    text-decoration: line-through;
+}
+
+.task .completed .close-icon {
+    pointer-events: none;
+    text-decoration: line-through;
+}
