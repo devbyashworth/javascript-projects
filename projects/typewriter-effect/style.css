@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fefefe;
+    background-color: #1b1b1b;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    height: 100vh;
+    gap: 10px;
+}
+
+.static-txt {
+    font-size: 2em;
+}
+
+.dynamic-txts {
+    font-size: 2em;
+    color: salmon;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 2px;
+    border-right: 1px solid salmon;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: salmon;
+    }
+}
