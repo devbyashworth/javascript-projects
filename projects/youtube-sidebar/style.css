@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    color: #fefefe;
+    overflow: hidden;
+    background-color: #272727;
+    font-family: "Roboto" sans-serif;
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px 0;
+    height: 100%;
+    width: 80px;
+    gap: 16px;
+}
+
+.sidebar .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.sidebar .menu-btn img, 
+.menu-header .menu-btn img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.sidebar .menu-btn:hover { background-color: #272727; }
+
+.sidebar .sidebar-items {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.sidebar-items .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 16px 2px;
+    cursor: pointer;
+}
+
+.sidebar-items .item:hover { background-color: #272727; }
+
+.sidebar-items .item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+}
+
+.sidebar-items .item span { font-size: 12px; }
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px;
+    height: 100%;
+    width: 240px;
+    z-index: 10;
+    background-color: #121212;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+#menu.visible { transform: translateX(0); }
+
+#menu .menu-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 6px;
+    gap: 24px;
+}
+
+#menu .menu-group {
+    padding: 16px 0;
+    border-block: 1px solid #3f3f3f;
+}
+
+.menu-group .menu-item {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.menu-group .menu-item:hover { background-color: #272727; }
+
+.menu-group .menu-item img { margin-right: 24px; }
+
+section {
+    width: 100%;
+    height: 100%;
+}
+
+section nav {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+}
+
+section nav a img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.profile img, 
+.menu-group .menu-item img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.profile img { border-radius: 100%; }
+
+section main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+main h1 { font-size: 45px; }
