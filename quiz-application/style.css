@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-correct: 145;
+  --hue-wrong: 0;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px;
+  background-color: #fefefe;
+  border-radius: 5px;
+  max-width: 80%;
+  padding: 15px;
+  width: 600px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  outline: none;
+  color: #fefefe;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+
+.btn:hover {
+  border-color: #121212;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: #121212;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn,
+.next-btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+
+.hide {
+  display: none;
+}
