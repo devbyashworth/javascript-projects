@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Upload [Drag and Drop]</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form action="" class="dropzone-container">
-        <h2>Upload and attach</h2>
-        <p>Click to Upload or drag and drop</p>
-        <div class="dropzone-area">
-            <div class="file-upload-icon"><img src="./file.png" alt=""></div>
-            <input type="file" name="upload-file" id="upload-file" required>
-            <p class="file-info">No Files Selected</p>
-        </div>
-        <div class="dropzone-actions">
-            <button type="reset">Cancel</button>
-            <button type="submit" id="submit-file">Upload</button>
-        </div>
+      <h2>Upload and attach</h2>
+      <p>Click to Upload or drag and drop</p>
+      <div class="dropzone-area">
+        <div class="file-upload-icon"><img src="./file.png" alt="" /></div>
+        <!-- <input type="file" name="upload-file" id="upload-file" required> -->
+        <input
+          type="file"
+          name="upload-file"
+          id="upload-file"
+          accept=".png,.jpg,.jpeg,.pdf,.docx"
+          required
+        />
+
+        <p class="file-info">No Files Selected</p>
+      </div>
+      <div class="dropzone-actions">
+        <button type="reset">Cancel</button>
+        <button type="submit" id="submit-file">Upload</button>
+      </div>
     </form>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

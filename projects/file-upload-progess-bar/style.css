@@ -1,78 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-    margin-bottom: 20px;
-    color: #333;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 input[type="file"] {
-    width: 300px;
-    margin-bottom: 20px;
-}
-
-progress {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#status {
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #555;
-}
-
-#totalUploaded {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: #777;
-}
-
-input[type="file"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    cursor: pointer;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 input[type="file"]::file-selector-button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #eee;
-    cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
 }
 
 progress {
-    width: 300px;
-    height: 20px;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 300px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
 progress::-webkit-progress-bar {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 progress::-webkit-progress-value {
-    background-color: #76c7c0;
+  background-color: #76c7c0;
 }
 
 progress::-moz-progress-bar {
-    background-color: #76c7c0;
+  background-color: #76c7c0;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+#totalUploaded {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #777;
 }
