@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <button type="button" class="toggle" onclick="toggleClick()">
+        <span class="material-symbols-outlined"> chevron_right </span>
+      </button>
+      <div class="inner">
+        <div class="header">
+          <img src="./logo.jpg" alt="Dev by Ashworth" />
+          <h1>Dev by Ashworth</h1>
+        </div>
+        <div class="search">
+          <span class="material-symbols-outlined">search</span>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search..."
+          />
+        </div>
+        <nav class="menu">
+          <button type="button">
+            <span class="material-symbols-outlined">dashboard</span>
+            <p>Dashboard</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined">leaderboard</span>
+            <p>Leaderboard</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined">monitoring</span>
+            <p>Monitoring</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined">chat</span>
+            <p>Message</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined">settings</span>
+            <p>Settings</p>
+          </button>
+        </nav>
+      </div>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
