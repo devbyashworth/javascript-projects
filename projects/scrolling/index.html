@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smooth Scroll Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <h1>Welcome to Scroll Effect</h1>
+      <button
+        type="button"
+        onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})"
+      >
+        Learn More
+      </button>
+    </header>
+
+    <section id="about" class="section">
+      <h2>About This Page</h2>
+      <p>
+        This demo showcases how scroll effects can enhance the user experience.
+        By combining JavaScript and CSS transitions, we create smooth,
+        responsive animations that react to user actions like scrolling.
+      </p>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Key Features</h2>
+      <ul>
+        <li>📜 Scroll-based header animation</li>
+        <li>🎨 Dynamic background resizing</li>
+        <li>🧩 Responsive design</li>
+        <li>⚡ Smooth transitions</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>More Content</h2>
+      <p>
+        Scroll down further to see the footer. You can easily customize this
+        page to showcase products, services, or ideas while keeping a modern and
+        interactive feel.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        &copy; 2025 Scroll Effect Demo. Built with 💻 and ☕ by DevByAshworth.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
