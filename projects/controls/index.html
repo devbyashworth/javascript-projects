@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controls</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="textbox">
+        <input
+          oninput="handleChanges(event)"
+          onkeydown="handleStartTyping()"
+          autocomplete="off"
+          type="text"
+          name="input"
+          id="input"
+        />
+        <span class="material-symbols-outlined icon">account_circle</span>
+        <label for="input">Username</label>
+        <span class="spinner"></span>
+      </div>
+      <button disabled>
+        <p>Sign Up</p>
+        <span class="material-symbols-outlined">arrow_right_alt</span>
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

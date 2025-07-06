@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fefefe;
+  line-height: 1.6;
+  background-color: #1c1c1c;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textbox {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.textbox :is(label, span) {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  pointer-events: none;
+  color: #888888;
+  transition: 0.3s;
+}
+
+.textbox label {
+  left: 44px;
+  padding: 2px 8px;
+}
+
+.textbox .icon {
+  left: 16px;
+  z-index: 2;
+  font-size: 26px;
+}
+
+.textbox input {
+  width: 240px;
+  height: 56px;
+  outline: none;
+  font-size: 16px;
+  color: #f9f9f9;
+  padding-left: 48px;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 2px solid #292929;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.textbox input.valid.has-value {
+  border-color: #14ca99;
+}
+
+.textbox :is(input:focus, .has-value) {
+  border-color: #d3d3d3;
+}
+
+.textbox input.has-value {
+  border-color: #ff5360;
+}
+
+.textbox :is(input:focus, .has-value) ~ span {
+  color: #f9f9f9;
+}
+
+.textbox :is(input:focus, .has-value) ~ label {
+  scale: 0.8;
+  border-radius: 8px;
+  translate: -42px -42px;
+  background-color: #151515;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  translate: 0 -50%;
+  opacity: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border-top-color: #f7f7f7;
+  border: 3px solid rgba(255, 255, 255, 0.14);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    rotate: 1turn;
+  }
+}
+
+.spinner.visible {
+  opacity: 1;
+}
+
+button {
+  border: 0;
+  outline: none;
+  width: 240px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+button:hover {
+  background-color: #aaa;
+  background-color: #888888;
+}
