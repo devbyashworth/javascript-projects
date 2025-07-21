@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fefefe;
+  line-height: 1.6;
+  background-color: #1c1c1c;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group .input {
+  width: 280px;
+  height: 56px;
+  outline: none;
+  font-size: 16px;
+  color: #f9f9f9;
+  padding-left: 20px;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 2px solid #292929;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.input-group .label,
+.input-group .icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: #888888;
+  transition: 0.3s;
+}
+
+.input-group .label {
+  left: 18px;
+  padding: 2px 8px;
+  pointer-events: none;
+}
+
+.input-group .icon {
+  right: 16px;
+  z-index: 2;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888888;
+}
+
+/* Floating effect when focused or has content */
+.input-group .input:focus ~ .label,
+.input:not(:placeholder-shown) ~ .label {
+  transform: translate(-15px, -42px) scale(0.8);
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+/* Hide browser's default password visibility toggle */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-clear-button,
+input::-webkit-inner-spin-button,
+input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+}
+
+input::-webkit-password-toggle-button {
+  display: none !important;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
