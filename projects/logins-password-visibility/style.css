@@ -1,100 +1,121 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #080808;
-    min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080808;
+  min-height: 100vh;
 }
 
 .login-card {
-    width: 400px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 1.25rem;
-    padding: 100px 30px 64px;
+  width: 400px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 100px 30px 64px;
 }
 
 .login-card h2 {
-    margin: 0 0 6px;
-    font-size: 36px;
-    font-weight: 600;
+  margin: 0 0 6px;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 .login-card h3 {
-    font-size: 1rem;
-    color: #837f90;
-    margin: 0 0 40px;
-    font-weight: 500;
+  font-size: 1rem;
+  color: #837f90;
+  margin: 0 0 40px;
+  font-weight: 500;
 }
 
 .login-form {
-    width: 100%;
-    display: grid;
-    gap: 16px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
 }
 
 .login-form input.control::placeholder {
-    color: #837f90;
+  color: #837f90;
 }
 
 .login-form button.control {
-    width: 100%;
-    height: 56px;
-    border: 0;
-    padding: 0 16px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #f9f9f9;
-    text-align: center;
-    letter-spacing: 2px;
-    font-family: inherit;
-    transition: all .375s;
-    background: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 56px;
+  border: 0;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f9f9f9;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: inherit;
+  transition: all 0.375s;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 button {
-    border: 0;
-    cursor: pointer;
-    background: transparent;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
 }
 
 .control {
-    border: 0;
-    width: 100%;
-    height: 56px;
-    outline: none;
-    padding: 0 16px;
-    font-size: 16px;
-    transition: .4s;
-    border-radius: 8px;
-    font-family: inherit;
-    background: rgba(0, 0, 0, .3);
+  border: 0;
+  width: 100%;
+  height: 56px;
+  outline: none;
+  padding: 0 16px;
+  font-size: 16px;
+  transition: 0.4s;
+  border-radius: 8px;
+  font-family: inherit;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .password {
-    position: relative;
+  position: relative;
 }
 
 .toggle {
-    position: absolute;
-    top: 25%;
-    right: 16px;
-    width: 30px;
-    height: 30px;
-    transition: 0 -50%;
-    background-image: url(eye_see_show.png);
-    background-size: 85%;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  right: 16px;
+  width: 30px;
+  height: 30px;
+  transition: 0 -50%;
+  background-image: url(eye_see_show.png);
+  background-size: 85%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .toggle.showing {
-    background-image: url(disable_eye.png);
+  background-image: url(disable_eye.png);
+}
+
+/* Hide browser's default password visibility toggle */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+input::-webkit-credentials-auto-fill-button,
+input::-webkit-clear-button,
+input::-webkit-inner-spin-button,
+input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+}
+
+input::-webkit-password-toggle-button {
+  display: none !important;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
 }
