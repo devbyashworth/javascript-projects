@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebars</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header>
+        <img src="./logo.jpg" alt="logo" />
+        <h3>DevByAshworth</h3>
+      </header>
+      <ul class="main-menu">
+        <li>
+          <button type="button" onclick="gotoPage(this)">
+            <span class="material-symbols-outlined icon">dashboard</span>
+            <p>Dashboard</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="openSubMenu(this)">
+            <span class="material-symbols-outlined icon">create</span>
+            <p>Create</p>
+            <span class="material-symbols-outlined icon">
+              keyboard_arrow_down
+            </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Article</button></li>
+              <li><button type="button">Documents</button></li>
+              <li><button type="button">Slides</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="openSubMenu(this)">
+            <span class="material-symbols-outlined icon">account_circle</span>
+            <p>Account</p>
+            <span class="material-symbols-outlined icon">
+              keyboard_arrow_down
+            </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Admin</button></li>
+              <li><button type="button">Display</button></li>
+              <li><button type="button">Appearance</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="openSubMenu(this)">
+            <span class="material-symbols-outlined icon">profile</span>
+            <p>Profile</p>
+            <span class="material-symbols-outlined icon">
+              keyboard_arrow_down
+            </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Avator</button></li>
+              <li><button type="button">Theme</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="gotoPage(this)">
+            <span class="material-symbols-outlined icon">notifications</span>
+            <p>Notifications</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="gotoPage(this)">
+            <span class="material-symbols-outlined icon">products</span>
+            <p>Products</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="gotoPage(this)">
+            <span class="material-symbols-outlined icon">settings</span>
+            <p>Settings</p>
+          </button>
+        </li>
+      </ul>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
