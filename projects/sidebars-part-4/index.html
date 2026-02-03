@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebars</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header>
+        <button type="button">
+          <span class="material-symbols-outlined"> deployed_code </span>
+          <img src="./logo.jpg" alt="company logo" />
+        </button>
+      </header>
+      <ul>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined">home</span>
+            <p>Home</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined"> shopping_basket </span>
+            <p>Products</p>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Digital</button></li>
+              <li><button type="button">Physical</button></li>
+              <li><button type="button">Inventory</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined">create</span>
+            <p>Create</p>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Video</button></li>
+              <li><button type="button">Article</button></li>
+              <li><button type="button">Documents</button></li>
+              <li><button type="button">Presentation</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined"> user_attributes </span>
+            <p>Profile</p>
+            <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+          </button>
+          <div class="sub-menu">
+            <ul>
+              <li><button type="button">Avator</button></li>
+              <li><button type="button">Theme</button></li>
+              <li><button type="button">Tasks</button></li>
+              <li><button type="button">Extensions</button></li>
+              <li><button type="button">Notifications</button></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined">dashboard</span>
+            <p>Dashboard</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined"> account_circle </span>
+            <p>Account</p>
+          </button>
+        </li>
+        <li>
+          <button type="button" onclick="onClick(this)">
+            <span class="material-symbols-outlined">settings</span>
+            <p>Settings</p>
+          </button>
+        </li>
+      </ul>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
