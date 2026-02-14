@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deposit Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="slider-wrapper">
+      <label for="slider-input" class="slider-label">Deposit</label>
+
+      <div class="slider">
+        <input id="slider-input" type="range" min="0" max="100" value="50" />
+        <div class="track"></div>
+        <div class="bar" id="slider-bar"></div>
+
+        <div class="markers" id="markers">
+          <div class="marker" style="left: 0%"></div>
+          <div class="marker" style="left: 25%"></div>
+          <div class="marker" style="left: 50%"></div>
+          <div class="marker" style="left: 75%"></div>
+          <div class="marker" style="left: 100%"></div>
+        </div>
+      </div>
+
+      <div class="numeric-input-wrapper">
+        <input
+          type="text"
+          id="numeric-input"
+          class="numeric-input"
+          value="50"
+          maxlength="3"
+          placeholder="0"
+        />
+        <span class="numeric-input-suffix">%</span>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
