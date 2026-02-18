@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logins</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <ul class="nav">
+        <li>
+          <img src="./dev_by_ashworth.png" alt="company logo" />
+          <span class="active-bar"></span>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="signin-btn active"
+            onclick="selectView('signin')"
+          >
+            <span class="material-symbols-outlined icon">signin</span>
+            <span>Sign In</span>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="signup-btn"
+            onclick="selectView('signup')"
+          >
+            <span class="material-symbols-outlined icon">signin</span>
+            <span>Sign Up</span>
+          </button>
+        </li>
+      </ul>
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="hero-content signin">
+            <div>
+              <h2>Welcome Back,</h2>
+              <h3>Please enter your credentials.</h3>
+            </div>
+            <img src="./home-office-setup.jpg" alt="signin image" />
+          </div>
+          <div class="hero-content signup">
+            <div>
+              <h2>Sign Up Now.</h2>
+
+              <h3>Join the crowd and get started.</h3>
+            </div>
+            <img src="./code.jpg" alt="signup image" />
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <div class="forms">
+          <form action="#" class="active" id="signup">
+            <p>Don't have an account? <a href="#signup">Sign Up</a>.</p>
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input
+                type="email"
+                name="login-email"
+                id="login-email"
+                placeholder="person@email.com"
+              />
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input
+                type="password"
+                name="login-password"
+                id="login-password"
+                placeholder="********"
+              />
+            </div>
+            <!-- <a href="#">Forgotten password?</a> -->
+            <div class="btn">
+              <button type="button">Sign in</button>
+            </div>
+            <p>
+              By clicking Sign in you agree to our terms and conditions, privacy
+              policy and reusability rules.
+            </p>
+          </form>
+          <form action="#" id="signup">
+            <p>Already have an account? <a href="#signin">Sign In</a>.</p>
+            <div class="field">
+              <label for="signup-email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="signup-email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="signup-password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="signup-password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                placeholder="Confirm password"
+                required
+              />
+            </div>
+            <div class="btn">
+              <!-- <input type="submit" value="Sign up" /> -->
+              <button type="button">Sign in</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
