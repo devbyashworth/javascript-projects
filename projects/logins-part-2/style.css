@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5679;
+  background-color: #fafafa;
+  background-color: #121212;
+  font-family: "Poppins", sans-serif;
+}
+/* 
+
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 440px;
+  text-align: center;
+  border-radius: 16px;
+  background-color: #fefefe;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  z-index: 2;
+  background: #3a5ed4;
+  transition: 0.5s;
+}
+
+.card-bg.signin {
+  translate: 100% 0;
+}
+
+.hero,
+.form {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.hero.signin {
+  left: 50%;
+  translate: 0% 0%;
+}
+
+.hero.signin.active {
+  translate: 0;
+}
+
+.hero {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 50%;
+  padding: 0 24px;
+  color: #f9f9f9;
+}
+
+.hero button {
+  padding: 12px 40px;
+  border-radius: 32px;
+  border: 1px solid #f9f9f9;
+  background: transparent;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.form.signin {
+  translate: 50% 0;
+}
+
+.form.signin.active {
+  translate: 0;
+}
+
+.form.signup {
+  left: 50%;
+  translate: -50% 0;
+}
+
+.form.signup.active {
+  translate: 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  z-index: 1;
+  padding: 32px;
+  background-color: #fefefe;
+}
+
+.form p {
+  opacity: 0.5;
+  font-size: 12px;
+}
+
+.form input {
+  border: 0;
+  padding: 14px 12px;
+  border-radius: 10px;
+  background: #eef0f7;
+}
+
+.form input::placeholder {
+  color: #a0a2b6;
+}
+
+.form button {
+  border: 0;
+  width: 160px;
+  padding: 14px 0;
+  color: #f9f9f9;
+  border-radius: 32px;
+  background-color: #3a5ed4;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+  color: #f9f9f9;
+  transition: 0.5s;
+}
+
+.hero.signin {
+  left: 0;
+}
+
+.hero.signup {
+  left: 50%;
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  padding: 32px;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  transition: 0.5s;
+}
+
+.form.signin {
+  left: 0;
+}
+
+.form.signup {
+  left: 50%;
+} */
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 440px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Forms container */
+.form-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each form */
+.form {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #eef0f7;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #3a5ed4;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+/* HERO CONTAINER */
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #3a5ed4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s ease;
+  z-index: 10;
+}
+
+/* Move hero right */
+.card.signup-active .hero-container {
+  transform: translateX(100%);
+}
+
+.hero-content {
+  text-align: center;
+  padding: 30px;
+}
+
+#hero-text {
+  margin: 10px 0;
+}
