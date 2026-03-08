@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main Page Content -->
+    <main class="main-content">
+      <h1>Welcome to Byteworth</h1>
+      <p>Your modern communication platform.</p>
+    </main>
+
+    <!-- Open Button -->
+    <button id="openModalBtn" class="open-btn">
+      <span>Sign up free</span>
+      <span class="material-symbols-outlined"> trending_flat </span>
+    </button>
+
+    <!-- Overlay -->
+    <div id="modalOverlay" class="overlay"></div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About</h4>
+          <p>
+            Byteworth is a next-generation messaging platform built for creators
+            and businesses.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Byteworth. All rights reserved.</div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modalDialog" class="modal">
+      <header>
+        <h2>Sign Up</h2>
+        <h3>Try Byteworth today.</h3>
+      </header>
+
+      <form>
+        <input type="email" name="email" placeholder="Email" required />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+
+        <button id="signupBtn" class="signup-button" type="button">
+          <span>Sign up</span>
+        </button>
+      </form>
+
+      <p class="note">No credit card information required</p>
+
+      <div class="modal-footer">
+        <div class="divider">
+          <span>or continue with</span>
+        </div>
+
+        <div class="social-login">
+          <button type="button" class="social-btn google">
+            <i class="fa-brands fa-google"></i>
+            <span>Google</span>
+          </button>
+
+          <button type="button" class="social-btn github">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </button>
+        </div>
+
+        <p class="account-text">
+          Already have an account?
+          <a href="#">Sign in</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
