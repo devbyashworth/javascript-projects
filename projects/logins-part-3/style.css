@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --color-primary: #6368e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5679;
+  background-color: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 14px;
+}
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  width: 860px;
+  height: 440px;
+  rotate: -45deg;
+  transform-origin: 0% 100%;
+  background-color: var(--color-primary);
+}
+
+.card-bg-2 {
+  right: 0;
+  left: auto;
+  opacity: 0;
+  rotate: 0deg;
+  transform-origin: 100% 100%;
+  background: var(--color-primary);
+}
+
+.logo {
+  position: absolute;
+  top: 72px;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.6s ease;
+  transition: 0.4s 0.6s;
+}
+
+/* Left side logo */
+.logo-1 {
+  left: 48px;
+  transform: translateX(-40px);
+}
+
+/* Right side logo */
+.logo-2 {
+  right: 48px;
+  transform: translateX(40px);
+}
+
+/* SHOW RIGHT logo when SIGN IN is active */
+.card.signin-mode .logo-2 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* SHOW LEFT logo when SIGN UP is active */
+.card.signup-mode .logo-1 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.form form {
+  width: 100%;
+  max-width: 260px;
+  display: grid;
+  gap: 12px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.form h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2b2f4c;
+}
+
+.form form {
+  width: 100%;
+  max-width: 250px;
+  display: grid;
+  gap: 16px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7f2;
+  background: #f9fafe;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2b2f4c;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.form input::placeholder {
+  color: #9aa3c7;
+}
+
+/* Focus Effect */
+.form input:focus {
+  border-color: var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 104, 230, 0.15);
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(99, 104, 230, 0.25);
+}
+
+/* Hover */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(99, 104, 230, 0.35);
+}
+
+/* Click */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(99, 104, 230, 0.2);
+}
+
+.form.signup {
+  translate: 100% 0;
+}
+
+.form.signup form {
+  translate: 320px 0;
+}
+
+.form.signin form {
+  translate: -320px 0;
+}
+
+.form.signup.active form,
+.form.signin.active form {
+  opacity: 1;
+  translate: 0;
+  transition: 0.5s 1s;
+}
+
+.card-bg-1.signup {
+  animation: card-bg-signup 1.5s both;
+}
+
+.card-bg-1.signin {
+  animation: card-bg-signin 1.5s both;
+}
+
+.card-bg-2.signup {
+  animation: card-bg-2-signup 1.5s both;
+}
+
+.card-bg-2.signin {
+  animation: card-bg-2-signin 1.5s both;
+}
+
+@keyframes card-bg-signup {
+  0% {
+    rotate: -45deg;
+  }
+  50% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    rotate: 0deg;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes card-bg-signin {
+  0% {
+    opacity: 0;
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  50.01%,
+  100% {
+    opacity: 1;
+  }
+  100% {
+    rotate: -45deg;
+  }
+}
+
+@keyframes card-bg-2-signup {
+  0%,
+  50% {
+    rotate: 0;
+    opacity: 0;
+  }
+  50.01% {
+    opacity: 1;
+    rotate: 0deg;
+  }
+  100% {
+    opacity: 1;
+    rotate: 45deg;
+  }
+}
+
+@keyframes card-bg-2-signin {
+  0% {
+    rotate: 45deg;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    rotate: 0deg;
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/***/

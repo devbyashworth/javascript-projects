@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card signin-mode">
+      <!-- Backgrounds -->
+      <div class="card-bg card-bg-1 signin"></div>
+      <div class="card-bg card-bg-2 signin"></div>
+
+      <!-- Logos -->
+      <img
+        src="./dev_by_ashworth.png"
+        alt="Dev By Ashworth Logo"
+        class="logo logo-1"
+      />
+      <img src="./codedbyash.png" alt="Coded By Ash Logo" class="logo logo-2" />
+
+      <!-- SIGN IN FORM -->
+      <div class="form signin active">
+        <form>
+          <h2>Welcome Back</h2>
+
+          <input
+            type="email"
+            name="signin-email"
+            id="signin-email"
+            placeholder="Email or Username"
+            required
+          />
+
+          <input
+            type="password"
+            name="signin-password"
+            id="signin-password"
+            placeholder="Password"
+            required
+          />
+          <p><a href="#">Forgot Password?</a></p>
+          <button type="button" class="btn">Sign In</button>
+          <p>
+            Don't have an account? <a href="#" class="toggle-form">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- SIGN UP FORM -->
+      <div class="form signup">
+        <form>
+          <h2>Create Account</h2>
+
+          <input
+            type="text"
+            name="signup-name"
+            id="signup-name"
+            placeholder="Full Name"
+            required
+          />
+
+          <input
+            type="email"
+            name="signup-email"
+            id="signup-email"
+            placeholder="Email Address"
+            required
+          />
+
+          <input
+            type="password"
+            name="signup-password"
+            id="signup-password"
+            placeholder="Create Password"
+            required
+          />
+
+          <button type="button" class="btn">Sign Up</button>
+          <p>
+            Already have an account? <a href="#" class="toggle-form">Sign In</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
