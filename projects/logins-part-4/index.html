@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="solar-system">
+      <div class="orbit mercury">
+        <div class="planet"></div>
+      </div>
+
+      <div class="orbit venus">
+        <div class="planet"></div>
+      </div>
+
+      <div class="orbit earth">
+        <div class="planet"></div>
+      </div>
+
+      <div class="orbit mars">
+        <div class="planet"></div>
+      </div>
+
+      <div class="orbit jupiter">
+        <div class="planet"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="hero">
+        <div class="toggle login-active">
+          <button type="button" onclick="toggleView('login')">
+            <span>Sign In</span>
+          </button>
+
+          <button type="button" onclick="toggleView('register')">
+            <span>Sign Up</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="forms">
+        <form class="form login active">
+          <h2>Welcome back</h2>
+
+          <input type="email" placeholder="Email or Username" required />
+
+          <input type="password" placeholder="Password" required />
+
+          <p><a href="#">Forgot Password?</a></p>
+
+          <button type="submit" class="btn">Sign In</button>
+        </form>
+
+        <form class="form register">
+          <h2>Start your journey</h2>
+
+          <input type="text" placeholder="Full Name" required />
+
+          <input type="email" placeholder="Email Address" required />
+
+          <input type="password" placeholder="Create Password" required />
+
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+      </div>
+
+      <p class="terms">
+        By using this software you agree to our terms, privacy policy and reuse
+        rules.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

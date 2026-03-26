@@ -1,0 +1,261 @@
+:root {
+  --color-primary: #6368e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0 34px;
+  border-radius: 32px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero {
+  width: 94%;
+  height: 190px;
+  border-radius: 22px;
+  background: url("./text-logo.png") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.toggle {
+  position: absolute;
+  bottom: 6px;
+  width: 100%;
+  display: flex;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  height: 100%;
+  width: calc(50% - 6px);
+  border-radius: 20px;
+  background: #f9f9f9;
+  transition: 0.3s;
+}
+
+.login-active::after {
+  transform: translateX(0);
+}
+
+.toggle:not(.login-active)::after {
+  transform: translateX(100%);
+}
+
+.toggle button {
+  flex: 1;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 32px;
+  cursor: pointer;
+}
+
+.toggle span {
+  position: relative;
+  z-index: 1;
+}
+
+.forms {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.form {
+  position: absolute;
+  width: 100%;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0.4;
+  transform: translateX(100%);
+  transition: 0.4s;
+}
+
+.login {
+  transform: translateX(-100%);
+}
+
+.form.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7f2;
+  background: #f9fafe;
+  font-size: 14px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(99, 104, 230, 0.15);
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 104, 230, 0.35);
+}
+
+.terms {
+  font-size: 12px;
+  color: #9a9ab0;
+  margin: 30px 24px 0;
+}
+
+/* ---------- SOLAR SYSTEM BACKGROUND ---------- */
+
+.solar-system {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ORBITS */
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin linear infinite;
+}
+
+/* PLANETS */
+
+.planet {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* MERCURY */
+
+.mercury {
+  width: 120px;
+  height: 120px;
+  animation-duration: 6s;
+}
+
+.mercury .planet {
+  background: #b1b1b1;
+}
+
+/* VENUS */
+
+.venus {
+  width: 200px;
+  height: 200px;
+  animation-duration: 10s;
+}
+
+.venus .planet {
+  background: #e6c27a;
+}
+
+/* EARTH */
+
+.earth {
+  width: 300px;
+  height: 300px;
+  animation-duration: 16s;
+}
+
+.earth .planet {
+  background: #3aa6ff;
+}
+
+/* MARS */
+
+.mars {
+  width: 420px;
+  height: 420px;
+  animation-duration: 22s;
+}
+
+.mars .planet {
+  background: #d14b28;
+}
+
+/* JUPITER */
+
+.jupiter {
+  width: 600px;
+  height: 600px;
+  animation-duration: 40s;
+}
+
+.jupiter .planet {
+  background: #d8b089;
+  width: 18px;
+  height: 18px;
+}
+
+/* ORBIT ANIMATION */
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+}
