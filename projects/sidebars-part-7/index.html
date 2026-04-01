@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebars</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="space">
+      <div class="stars"></div>
+
+      <div class="solar-system">
+        <div class="orbit-plane">
+          <div class="sun"></div>
+
+          <div class="orbit mercury">
+            <div class="planet"></div>
+            <span class="planet-name">Mercury</span>
+          </div>
+
+          <div class="orbit venus">
+            <div class="planet"></div>
+            <span class="planet-name">Venus</span>
+          </div>
+
+          <div class="orbit earth">
+            <div class="planet"></div>
+            <span class="planet-name">Earth</span>
+          </div>
+
+          <div class="orbit mars">
+            <div class="planet"></div>
+            <span class="planet-name">Mars</span>
+          </div>
+
+          <div class="orbit jupiter">
+            <div class="planet"></div>
+            <span class="planet-name">Jupiter</span>
+          </div>
+
+          <div class="orbit saturn">
+            <div class="planet saturn-body">
+              <div class="rings"></div>
+            </div>
+            <span class="planet-name">Saturn</span>
+          </div>
+
+          <div class="orbit uranus">
+            <div class="planet"></div>
+            <span class="planet-name">Uranus</span>
+          </div>
+
+          <div class="orbit neptune">
+            <div class="planet"></div>
+            <span class="planet-name">Neptune</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <button type="button" class="toggle" onclick="toggleOpen()">
+        <span class="material-symbols-outlined icon">chevron_right</span>
+      </button>
+      <div class="inner">
+        <div class="header">
+          <img src="./dev_by_ashworth.png" alt="company" />
+          <h1>ByteWorth</h1>
+        </div>
+        <div class="search">
+          <span class="material-symbols-outlined icon">search</span>
+          <input type="text" name="search" id="search" placeholder="Search" />
+        </div>
+        <nav class="menu">
+          <button type="button">
+            <span class="material-symbols-outlined icon">dashboard</span>
+            <p>Dashboard</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined icon">leaderboard</span>
+            <p>Leaderboard</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined icon">monitoring</span>
+            <p>Monitoring</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined icon">analytics</span>
+            <p>Analytics</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined icon">message</span>
+            <p>Message</p>
+          </button>
+          <button type="button">
+            <span class="material-symbols-outlined icon">settings</span>
+            <p>Settings</p>
+          </button>
+        </nav>
+      </div>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
