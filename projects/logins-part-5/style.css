@@ -1,0 +1,265 @@
+:root {
+  --color-primary: #6368e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 660px;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 8px solid #13111b;
+  background-color: #13111b;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 50%;
+  translate: 0 0;
+  border-radius: 12px;
+  background-color: #3c23c9;
+  transition: 0.65s ease-in-out;
+}
+
+.card-bg.login {
+  translate: 100% 0;
+}
+
+.hero,
+.form {
+  position: absolute;
+  opacity: 0;
+  width: 50%;
+  height: 100%;
+  visibility: hidden;
+  transition: 0.65s ease-in-out;
+}
+
+.hero.active,
+.form.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form.register {
+  left: 50%;
+}
+
+.hero.login {
+  left: 50%;
+  translate: 100% 0;
+}
+
+.hero.login.active {
+  translate: 0;
+}
+
+.hero.register {
+  translate: -100% 0;
+}
+
+.hero.register.active {
+  translate: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  z-index: 3;
+  padding: 0 20px;
+  color: #f9f9f9;
+  text-align: center;
+}
+
+.form.login {
+  translate: 100% 0;
+}
+
+.form.login.active {
+  translate: 0;
+}
+
+.form.register {
+  translate: -100% 0;
+}
+
+.form.register.active {
+  translate: 0;
+}
+
+.hero p {
+  margin: 0 0 6px;
+  color: #cac9d2;
+}
+
+.hero button {
+  color: inherit;
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 32px;
+  letter-spacing: 1px;
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid #f9f9f9;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  color: #3c23c9;
+  background: #f9f9f9;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  z-index: 1;
+  padding: 16px;
+  background-color: #13111b;
+}
+
+.form form {
+  width: 100%;
+  max-width: 250px;
+  display: grid;
+  gap: 16px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.form.active form {
+  opacity: 1;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7f2;
+  background: #f9fafe;
+  font-size: 14px;
+  font-family: inherit;
+  color: #2b2f4c;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.form input::placeholder {
+  color: #9aa3c7;
+}
+
+/* Focus Effect */
+.form input:focus {
+  border-color: var(--color-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 104, 230, 0.15);
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(99, 104, 230, 0.25);
+}
+
+/* Hover */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(99, 104, 230, 0.35);
+}
+
+/* Click */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(99, 104, 230, 0.2);
+}
+
+/* WALKING BACKGROUND */
+
+.walking-bg {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* WALKERS */
+
+.walker {
+  position: absolute;
+  bottom: 40px;
+  opacity: 0.25;
+  animation: walk 25s linear infinite;
+}
+
+.walker img {
+  width: 70px;
+  filter: brightness(0) invert(1);
+}
+
+/* Different speeds */
+
+.walker1 {
+  animation-duration: 22s;
+  bottom: 40px;
+}
+
+.walker2 {
+  animation-duration: 28s;
+  bottom: 80px;
+  transform: scale(0.8);
+}
+
+.walker3 {
+  animation-duration: 35s;
+  bottom: 120px;
+  transform: scale(1.1);
+}
+
+/* WALK ANIMATION */
+
+@keyframes walk {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 110%;
+  }
+}
