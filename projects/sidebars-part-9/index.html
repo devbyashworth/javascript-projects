@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebars</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="handle"></div>
+      <div class="sidebar-inner">
+        <header>
+          <img src="./dev_by_ashworth.png" alt="logo" class="logo-1" />
+          <img src="./text-logo-2.png" alt="logo text type" class="logo-2" />
+        </header>
+        <ul>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">dashboard</span>
+              <p>Dashboard</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">apps</span>
+              <p>Apps</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">folder</span>
+              <p>Files</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">group</span>
+              <p>Users</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">account_circle</span>
+              <p>Accounts</p>
+            </button>
+          </li>
+          <!-- <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">location_on</span>
+              <p>Locations</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">notifications</span>
+              <p>Notifications</p>
+            </button>
+          </li> -->
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">inventory_2</span>
+              <p>Products</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">warning</span>
+              <p>Warnings</p>
+            </button>
+          </li>
+          <li>
+            <button type="button" onclick="goToPage(this)">
+              <span class="material-symbols-outlined icon">settings</span>
+              <p>Settings</p>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
