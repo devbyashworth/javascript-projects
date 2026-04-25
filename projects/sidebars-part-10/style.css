@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  backdrop-filter: blur(20px);
+  background: rgb(0 0 0 / 12%);
+  border: 2px solid rgb(255 255 255 / 10%);
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 24px;
+  gap: 12px;
+}
+
+.sidebar header img {
+  height: 18px;
+}
+
+.sidebar-burger {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sidebar .menu {
+  position: relative;
+  display: grid;
+
+  /* IMPORTANT FIX */
+  --top: 0px;
+}
+
+.sidebar .menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -4px;
+  width: 4px;
+  height: 56px;
+  background: #6199f7;
+  transform: translateY(var(--top));
+  transition: 0.3s ease;
+}
+
+.sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  height: 56px;
+  opacity: 0.6;
+  padding: 0 22px;
+  color: #fefefe;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar .menu button:hover {
+  opacity: 0.85;
+  background: rgb(255 255 255 / 4%);
+}
+
+.sidebar .menu button.active {
+  opacity: 1;
+  background: rgb(255 255 255 / 6%);
+}
+
+.sidebar.open {
+  width: 260px;
+}
