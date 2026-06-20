@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  background: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 32px;
+  border-radius: 10px;
+  background: rgb(255 255 255/6%);
+  backdrop-filter: blur(16px) saturate(1.2);
+  background: color-mix(in oklch, rgb(255 255 255/8%) 72%, transparent);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, rgb(255 255 255 / 15%) 65%, transparent),
+    inset 0 0 0 0.06rem
+      color-mix(in oklch, rgb(255 255 255 / 6%) 55%, transparent);
+}
+
+nav > span {
+  margin-left: auto;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  margin-right: 28px;
+}
+
+.end:last-child {
+  justify-content: flex-end;
+}
+
+.end {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 24px;
+  padding-left: 24px;
+  border-left: 1px solid
+    color-mix(in oklch, rgb(255 255 255 / 40%) 65%, transparent);
+}
+
+.menu > ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+ul > li {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul > li:hover {
+  opacity: 1;
+}
+
+.submenu.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.submenu > div {
+  display: none;
+}
+
+.submenu ul {
+  display: grid;
+  gap: 20px;
+}
+
+.submenu > div.visible {
+  display: grid;
+}
+
+.submenu {
+  position: fixed;
+  top: 98px;
+  left: 0;
+  opacity: 0;
+  padding: 24px;
+  visibility: hidden;
+  border-radius: 10px;
+  background: rgb(255 255 255/2%);
+  background: color-mix(in oklch, rgb(255 255 255/2%) 72%, transparent);
+  backdrop-filter: blur(16px) saturate(1.2);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklch, rgb(255 255 255 / 3%) 65%, transparent),
+    inset 0 0 0 0.06rem
+      color-mix(in oklch, rgb(255 255 255 / 6%) 55%, transparent);
+  transition: 0.3s;
+}
