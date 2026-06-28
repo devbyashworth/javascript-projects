@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  background: #121212;
+  font-family: "Poppins", sans-serif;
+}
+
+body.resizing {
+  user-select: none;
+}
+
+body.resizing button {
+  cursor: ew-resize !important;
+}
+
+.sidebar.is-toggling {
+  transition: width 0.3s ease;
+}
+
+.sidebar {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  bottom: 20px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 32px;
+  backdrop-filter: blur(30px);
+}
+
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  pointer-events: none;
+  border-radius: inherit;
+  background: rgb(255 255 255 / 8%);
+}
+
+body.resizing .sidebar-inner,
+.sidebar:not(.collapsed) .sidebar-inner {
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed button p {
+  opacity: 0;
+}
+
+.sidebar-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: inherit;
+  background: rgb(0 0 0 / 14%);
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 18px 20px;
+}
+
+.logo-icon {
+  width: 22px;
+}
+
+.logo-text {
+  height: 17px;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .logo-text {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.handle {
+  position: absolute;
+  top: 32px;
+  right: -5px;
+  bottom: 32px;
+  width: 5px;
+  border-radius: 5px;
+  cursor: ew-resize;
+  transition: background 0.3s;
+}
+
+.handle:hover {
+  background: rgb(255 255 255 / 15%);
+}
+
+.sidebar button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 0;
+  width: 100%;
+  height: 56px;
+  opacity: 0.8;
+  line-height: 1;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  font-family: inherit;
+  color: rgb(255 255 255 / 95%);
+  background: transparent;
+}
+
+.sidebar button p {
+  flex: 1 1 auto;
+  white-space: nowrap;
+}
+
+.sidebar.collapsed button p {
+  position: absolute;
+  left: 68px;
+  opacity: 0;
+  height: 28px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background: rgb(0 0 0 / 32%);
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed button:hover p {
+  opacity: 1;
+}
+
+.sidebar button:not(.active):hover {
+  opacity: 1;
+  background: rgb(56 118 245 / 15%);
+}
+
+.sidebar ul {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidebar ul li:last-child {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  min-width: 24px;
+}
+
+.sidebar {
+  transition: width 0.3s ease;
+}
