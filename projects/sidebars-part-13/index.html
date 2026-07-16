@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <header class="sidebar-header">
+          <img src="" alt="" />
+          <button type="button" id="collapseBtn" class="collapse-btn">
+            <i data-lucide="panel-left"></i>
+          </button>
+        </header>
+        <div class="search">
+          <i data-lucide="search"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search..."
+          />
+          <span class="kbd"></span>
+        </div>
+        <ul class="nav">
+          <li>
+            <button type="button" class="active">
+              <i data-lucide="house"></i>
+              <span>Dashboard</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <i data-lucide="database"></i>
+              <span>CMS</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <i data-lucide="file-text"></i>
+              <span>Forms</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <i data-lucide="mouse-pointer-click"></i>
+              <span>Clicks</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <i data-lucide="git-compare"></i>
+              <span>Split Testing</span>
+            </button>
+          </li>
+        </ul>
+        <hr class="divider" />
+        <ul class="nav apps">
+          <li>
+            <button type="button">
+              <img src="web-flow.svg" alt="" /><span>Webflow</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <img src="framer.svg" alt="" /><span>Framer</span>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <img src="type-form.svg" alt="" /><span>Typeform</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="theme-toggle">
+          <i data-lucide="sun"></i>
+          <button type="button" class="switch on" id="themeSwitch">
+            <span></span>
+          </button>
+          <i data-lucide="moon"></i>
+        </div>
+      </div>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>

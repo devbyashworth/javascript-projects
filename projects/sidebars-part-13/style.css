@@ -1,0 +1,579 @@
+/* ==========================================
+   Google Font
+========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ==========================================
+   Variables
+========================================== */
+:root {
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+
+  --bg: #f4f7fb;
+  --sidebar: rgba(255, 255, 255, 0.88);
+
+  --text: #1f2937;
+  --muted: #6b7280;
+
+  --border: #e5e7eb;
+
+  --hover: #f3f4f6;
+
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  --radius: 18px;
+
+  --transition: 0.3s ease;
+}
+
+/* ==========================================
+   Dark Theme
+========================================== */
+
+body.dark {
+  --bg: #0f172a;
+  --sidebar: rgba(30, 41, 59, 0.92);
+
+  --text: #f8fafc;
+  --muted: #94a3b8;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --hover: rgba(255, 255, 255, 0.05);
+
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================
+   Reset
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 24px;
+
+  font-family: "Poppins", sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+/* ==========================================
+   Sidebar
+========================================== */
+
+.sidebar {
+  width: 300px;
+
+  height: calc(100vh - 48px);
+
+  background: var(--sidebar);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  transition: all 0.35s ease;
+
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 82px;
+}
+
+/* ==========================================
+   Inner
+========================================== */
+
+.sidebar-inner {
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  scrollbar-width: none;
+}
+
+.sidebar-inner::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.sidebar-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.sidebar-header img {
+  width: 44px;
+
+  height: 44px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+/* ==========================================
+   Collapse Button
+========================================== */
+
+.collapse-btn {
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  display: grid;
+
+  place-items: center;
+
+  background: var(--hover);
+
+  color: var(--muted);
+
+  transition: var(--transition);
+}
+
+.collapse-btn:hover {
+  background: var(--primary);
+
+  color: white;
+}
+
+.sidebar.collapsed .collapse-btn {
+  transform: rotate(180deg);
+}
+
+/* ==========================================
+   Search
+========================================== */
+
+.search {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 14px;
+
+  height: 48px;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  margin-bottom: 22px;
+
+  transition: var(--transition);
+}
+
+.search:focus-within {
+  border-color: var(--primary);
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.search input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+.search input::placeholder {
+  color: var(--muted);
+}
+
+.kbd {
+  margin-left: auto;
+
+  padding: 4px 8px;
+
+  border-radius: 8px;
+
+  background: var(--hover);
+
+  color: var(--muted);
+
+  font-size: 0.72rem;
+}
+
+/* ==========================================
+   Navigation
+========================================== */
+
+.nav {
+  list-style: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.nav button {
+  position: relative;
+
+  width: 100%;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 0 14px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  overflow: hidden;
+}
+
+.nav button:hover {
+  background: var(--hover);
+
+  transform: translateX(4px);
+}
+
+.nav button.active {
+  background: var(--primary);
+
+  color: white;
+}
+
+.nav button.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 12px;
+
+  width: 4px;
+
+  height: 24px;
+
+  border-radius: 0 4px 4px 0;
+
+  background: white;
+}
+
+.nav button .lucide {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+}
+
+/* ==========================================
+   Lucide Icons
+========================================== */
+
+.lucide {
+  width: 20px;
+
+  height: 20px;
+
+  flex-shrink: 0;
+
+  stroke-width: 2;
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.divider {
+  margin: 20px 0;
+
+  border: none;
+
+  height: 1px;
+
+  background: var(--border);
+}
+
+/* ==========================================
+   Theme Toggle
+========================================== */
+
+.theme-toggle {
+  margin-top: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  color: var(--muted);
+}
+
+.switch {
+  position: relative;
+
+  width: 52px;
+
+  height: 28px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #374151;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.switch.on {
+  background: #f59e0b;
+}
+
+.switch span {
+  position: absolute;
+
+  top: 3px;
+
+  left: 3px;
+
+  width: 22px;
+
+  height: 22px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  transition: transform 0.3s ease;
+}
+
+.switch:not(.on) span {
+  transform: translateX(24px);
+}
+
+/* ==========================================
+   Collapse Behaviour
+========================================== */
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.collapsed .collapse-btn {
+  margin: 0;
+}
+
+.sidebar.collapsed .search input,
+.sidebar.collapsed .kbd,
+.sidebar.collapsed .nav span,
+.sidebar.collapsed .theme-toggle {
+  opacity: 0;
+
+  visibility: hidden;
+
+  width: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+/* .sidebar.collapsed .search {
+  justify-content: center;
+} */
+
+.sidebar.collapsed .search {
+  justify-content: center;
+  padding: 0;
+  gap: 0;
+}
+
+/* .sidebar.collapsed .nav button {
+  justify-content: center;
+
+  padding: 0;
+} */
+
+.sidebar.collapsed .nav button {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0;
+}
+
+.sidebar.collapsed .nav button:hover {
+  transform: none;
+}
+
+.sidebar.collapsed .nav button.active::before {
+  display: none;
+}
+
+.sidebar.collapsed .nav button.active {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+.sidebar.collapsed .search {
+  width: 48px;
+  height: 48px;
+  margin-inline: auto;
+}
+
+.sidebar.collapsed .theme-toggle {
+  justify-content: center;
+}
+
+.sidebar.collapsed .theme-toggle i {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-inner {
+  padding: 20px 12px;
+}
+
+.sidebar.collapsed {
+  width: 82px;
+}
+
+.sidebar.collapsed .sidebar-inner {
+  padding: 20px 12px;
+}
+
+.sidebar.collapsed .sidebar-header {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-header img,
+.sidebar.collapsed .nav span,
+.sidebar.collapsed .search input,
+.sidebar.collapsed .kbd {
+  display: none;
+}
+
+.sidebar.collapsed .search {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0 auto 20px;
+  justify-content: center;
+  gap: 0;
+}
+
+.sidebar.collapsed .nav button {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.sidebar.collapsed .nav button.active {
+  background: var(--primary);
+}
+
+.sidebar.collapsed .nav button.active::before {
+  display: none;
+}
+
+.sidebar.collapsed .theme-toggle {
+  justify-content: center;
+}
+
+.sidebar.collapsed .theme-toggle i {
+  display: none;
+}
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+
+  .sidebar {
+    width: 100%;
+
+    height: auto;
+
+    position: relative;
+  }
+}
