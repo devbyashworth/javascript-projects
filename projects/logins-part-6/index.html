@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Registration</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="card">
+      <!-- ==========================
+           Navigation
+      =========================== -->
+      <ul class="card-nav">
+        <li class="logo">
+          <img src="dev_by_ashworth.png" alt="Company Logo" />
+          <span class="active-bar"></span>
+        </li>
+
+        <li>
+          <button
+            type="button"
+            class="signin active"
+            onclick="selectView('signin')"
+          >
+            <i data-lucide="log-in"></i>
+            <span>Sign In</span>
+          </button>
+        </li>
+
+        <li>
+          <button type="button" class="signup" onclick="selectView('signup')">
+            <i data-lucide="user-plus"></i>
+            <span>Sign Up</span>
+          </button>
+        </li>
+      </ul>
+
+      <!-- ==========================
+           Hero Section
+      =========================== -->
+      <div class="card-hero">
+        <div class="card-hero-inner">
+          <!-- Sign In -->
+          <div class="card-hero-content signin">
+            <h2>Welcome Back</h2>
+            <h3>Please sign in to continue.</h3>
+
+            <img src="signin.svg" alt="Sign in illustration" />
+          </div>
+
+          <!-- Sign Up -->
+          <div class="card-hero-content signup">
+            <h2>Create an Account</h2>
+            <h3>Join us and start your journey today.</h3>
+
+            <img src="signup.svg" alt="Sign up illustration" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================
+           Forms
+      =========================== -->
+      <div class="card-form">
+        <div class="forms">
+          <!-- ======================
+               Sign In
+          ======================= -->
+          <form id="signin" class="active" novalidate>
+            <p>
+              Don't have an account?
+              <a
+                href="#"
+                onclick="
+                  selectView('signup');
+                  return false;
+                "
+              >
+                Sign Up
+              </a>
+            </p>
+
+            <div class="row">
+              <label for="signInEmail">Email Address</label>
+
+              <input
+                type="email"
+                id="signInEmail"
+                name="signInEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signInPassword">Password</label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="signInPassword"
+                  name="signInPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="remember">
+              <label>
+                <input type="checkbox" />
+                Remember me
+              </label>
+
+              <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn">Sign In</button>
+
+            <p class="terms">
+              By signing in you agree to our
+              <a href="#">Terms & Conditions</a> and
+              <a href="#">Privacy Policy</a>.
+            </p>
+          </form>
+
+          <!-- ======================
+               Sign Up
+          ======================= -->
+          <form id="signup" novalidate>
+            <p>
+              Already have an account?
+              <a
+                href="#"
+                onclick="
+                  selectView('signin');
+                  return false;
+                "
+              >
+                Sign In
+              </a>
+            </p>
+
+            <div class="row">
+              <label for="signUpUsername">Username</label>
+
+              <input
+                type="text"
+                id="signUpUsername"
+                name="signUpUsername"
+                placeholder="Choose a username"
+                autocomplete="username"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signUpEmail">Email Address</label>
+
+              <input
+                type="email"
+                id="signUpEmail"
+                name="signUpEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signUpPassword">Password</label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="signUpPassword"
+                  name="signUpPassword"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <label for="confirmPassword">Confirm Password</label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" required />
+
+              <span>
+                I agree to the
+                <a href="#">Terms & Conditions</a> and
+                <a href="#">Privacy Policy</a>.
+              </span>
+            </label>
+
+            <button type="submit" class="btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Load Lucide icons
+      lucide.createIcons();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

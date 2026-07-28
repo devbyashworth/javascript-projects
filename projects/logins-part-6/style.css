@@ -1,0 +1,296 @@
+/* ==========================================
+   Google Font
+========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary: #6577ff;
+  --primary-dark: #5768ea;
+  --bg: #eef3ff;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #747b92;
+  --border: #dfe5f5;
+  --shadow: 0 20px 60px rgba(27, 39, 94, 0.15);
+  --radius: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #eef2ff, #dfe8ff);
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  width: min(980px, 100%);
+  height: 650px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  overflow: hidden;
+}
+
+.card-nav {
+  width: 150px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid var(--border);
+}
+.card-nav li {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+.card-nav .logo {
+  flex: 0.9;
+}
+.card-nav img {
+  width: 72px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.card-nav button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--muted);
+  font: inherit;
+  transition: 0.3s;
+}
+.card-nav button:hover {
+  color: var(--primary);
+}
+.card-nav button.active {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+.active-bar {
+  position: absolute;
+  left: 0;
+  top: 33.33%;
+  width: 6px;
+  height: 33.33%;
+  transition: 0.4s;
+}
+.active-bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 64px;
+  border-radius: 0 8px 8px 0;
+  background: var(--primary);
+}
+
+.card-hero {
+  flex: 0 0 340px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.card-hero-inner {
+  position: relative;
+  transition: 0.5s;
+}
+.card-hero-content {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+.card-hero-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card-hero-content h3 {
+  margin-top: 10px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+.card-hero-content img {
+  /* width: 220px; */
+  max-width: 100%;
+  margin: 40px auto 0;
+}
+
+.card-form {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.forms {
+  position: absolute;
+  inset: 0;
+  height: 200%;
+  transition: 0.5s;
+}
+.forms form {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  gap: 18px;
+}
+.forms p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.row label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.row input {
+  height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0 14px;
+  font: inherit;
+  transition: 0.25s;
+}
+.row input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(101, 119, 255, 0.15);
+}
+.password-field {
+  position: relative;
+}
+.password-field input {
+  width: 100%;
+  padding-right: 52px;
+}
+.toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+.remember,
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.checkbox {
+  justify-content: flex-start;
+  gap: 10px;
+}
+.btn {
+  height: 50px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: #fff;
+  font:
+    600 1rem Poppins,
+    sans-serif;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+.terms {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+  .card-nav {
+    width: 100%;
+    height: 90px;
+    flex-direction: row;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-nav .logo {
+    display: none;
+  }
+  .active-bar {
+    display: none;
+  }
+  .card-hero {
+    flex: none;
+    height: 260px;
+  }
+  .card-hero-content {
+    height: 260px;
+    padding: 24px;
+    text-align: center;
+  }
+  .card-hero-content img {
+    width: 140px;
+    margin: 20px auto 0;
+  }
+  .forms form {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+  .card {
+    border-radius: 18px;
+  }
+  .forms form {
+    padding: 20px;
+  }
+  .card-hero-content h2 {
+    font-size: 1.6rem;
+  }
+  .remember {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
