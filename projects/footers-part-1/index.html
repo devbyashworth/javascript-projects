@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="modalOverlay" class="overlay default"></div>
+    <div id="modalDialog" class="modal default">
+      <button class="close-btn" id="closeModalBtn">&times;</button>
+
+      <h2>Create your account</h2>
+
+      <form class="signup-form">
+        <input type="text" placeholder="Full Name" required />
+
+        <input type="email" placeholder="Email Address" required />
+
+        <input type="password" placeholder="Password" required />
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <article>
+          <h2>Try Dev by Ashworth today</h2>
+          <button type="button" id="openModalBtn" class="signup-button">
+            <p>Sign up free</p>
+            <span class="material-symbols-outlined icon">trending_flat</span>
+          </button>
+        </article>
+        <section class="top">
+          <img src="" alt="" class="logo" />
+          <ul>
+            <li>
+              <h3>Resources</h3>
+              <a href="#">Usage</a>
+              <a href="#">Docs</a>
+              <a href="#">Support</a>
+              <a href="#">Hardware</a>
+            </li>
+            <li>
+              <h3>Pricing</h3>
+              <a href="#">Overview</a>
+              <a href="#">Flexible</a>
+              <a href="#">High Volume</a>
+              <a href="#">Enterprise</a>
+            </li>
+            <li>
+              <h3>Developers</h3>
+              <a href="#">Forum</a>
+              <a href="#">Projects</a>
+              <a href="#">Open Source</a>
+              <a href="#">Github</a>
+            </li>
+            <li>
+              <h3>Company</h3>
+              <a href="#">About us</a>
+              <a href="#">Blog</a>
+              <a href="#">Partnerships</a>
+              <a href="#">Careers</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
