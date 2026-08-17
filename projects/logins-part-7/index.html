@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Modern responsive sign in and sign up interface."
+    />
+
+    <title>Authentication | Dev by Ashworth</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="card" id="authCard">
+      <!-- =========================
+           Navigation
+      ========================== -->
+
+      <nav class="card-nav" aria-label="Authentication navigation">
+        <div class="logo-wrapper">
+          <img src="./dev.png" alt="Dev by Ashworth" class="logo" />
+        </div>
+
+        <button
+          type="button"
+          class="nav-button active"
+          data-view="signin"
+          aria-selected="true"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">
+            person_check
+          </span>
+
+          <span>Sign In</span>
+        </button>
+
+        <button
+          type="button"
+          class="nav-button"
+          data-view="signup"
+          aria-selected="false"
+        >
+          <span class="material-symbols-outlined" aria-hidden="true">
+            person_add
+          </span>
+
+          <span>Sign Up</span>
+        </button>
+
+        <span class="active-bar" aria-hidden="true"></span>
+      </nav>
+
+      <!-- =========================
+           Hero
+      ========================== -->
+
+      <section class="card-hero" aria-live="polite">
+        <div class="hero-track">
+          <div class="hero-content">
+            <div class="hero-copy">
+              <span class="eyebrow">Welcome back</span>
+
+              <h1>Welcome Back.</h1>
+
+              <p>Please enter your credentials to continue.</p>
+            </div>
+
+            <img src="./signin.svg" alt="" aria-hidden="true" />
+          </div>
+
+          <div class="hero-content">
+            <div class="hero-copy">
+              <span class="eyebrow">Get started</span>
+
+              <h1>Sign Up Now.</h1>
+
+              <p>Create your account and get started today.</p>
+            </div>
+
+            <img src="./signup.svg" alt="" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           Forms
+      ========================== -->
+
+      <section class="card-form">
+        <div class="forms">
+          <!-- =====================
+               Sign In
+          ====================== -->
+
+          <form id="signin" class="auth-form" novalidate>
+            <div class="form-header">
+              <h2>Sign In</h2>
+
+              <p>
+                Don't have an account?
+                <button type="button" class="text-button" data-switch="signup">
+                  Sign Up
+                </button>
+              </p>
+            </div>
+
+            <div class="row">
+              <label for="signInEmail"> Email Address </label>
+
+              <input
+                type="email"
+                id="signInEmail"
+                name="signInEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signInPassword"> Password </label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="signInPassword"
+                  name="signInPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="remember">
+              <label class="check-label">
+                <input type="checkbox" name="remember" />
+
+                <span>Remember me</span>
+              </label>
+
+              <a href="#forgot-password"> Forgot Password? </a>
+            </div>
+
+            <button type="submit" class="btn">Sign In</button>
+
+            <p class="terms">
+              By signing in you agree to our
+              <a href="#terms">Terms & Conditions</a>
+              and
+              <a href="#privacy">Privacy Policy</a>.
+            </p>
+          </form>
+
+          <!-- =====================
+               Sign Up
+          ====================== -->
+
+          <form id="signup" class="auth-form" novalidate>
+            <div class="form-header">
+              <h2>Create Account</h2>
+
+              <p>
+                Already have an account?
+                <button type="button" class="text-button" data-switch="signin">
+                  Sign In
+                </button>
+              </p>
+            </div>
+
+            <div class="row">
+              <label for="signUpUsername"> Username </label>
+
+              <input
+                type="text"
+                id="signUpUsername"
+                name="signUpUsername"
+                placeholder="Choose a username"
+                autocomplete="username"
+                minlength="3"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signUpEmail"> Email Address </label>
+
+              <input
+                type="email"
+                id="signUpEmail"
+                name="signUpEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="row">
+              <label for="signUpPassword"> Password </label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="signUpPassword"
+                  name="signUpPassword"
+                  placeholder="Create a password"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row">
+              <label for="confirmPassword"> Confirm Password </label>
+
+              <div class="password-field">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  placeholder="Confirm your password"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                />
+
+                <button
+                  type="button"
+                  class="toggle-password"
+                  aria-label="Show password"
+                  aria-pressed="false"
+                >
+                  <i data-lucide="eye"></i>
+                </button>
+              </div>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="terms" required />
+
+              <span>
+                I agree to the
+                <a href="#terms">Terms & Conditions</a>
+                and
+                <a href="#privacy">Privacy Policy</a>.
+              </span>
+            </label>
+
+            <button type="submit" class="btn">Create Account</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
