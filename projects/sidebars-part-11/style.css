@@ -56,7 +56,7 @@ body.resizing button {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 24px 18px 20px;
+  padding: 24px 10px 20px;
 }
 
 .handle {
@@ -130,4 +130,19 @@ body.resizing button {
 .sidebar[style*="56px"] p {
   opacity: 0;
   pointer-events: none;
+}
+
+.logo-icon {
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 8px;
+
+  object-fit: cover;
+}
+
+.logo-text {
+  height: 45px;
+  transition: opacity 0.3s ease;
 }
