@@ -74,11 +74,17 @@ body.resizing .sidebar-inner,
 }
 
 .logo-icon {
-  width: 22px;
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 8px;
+
+  object-fit: cover;
 }
 
 .logo-text {
-  height: 17px;
+  height: 45px;
   transition: opacity 0.3s ease;
 }
 
