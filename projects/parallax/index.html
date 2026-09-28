@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section aria-labelledby="parallax-heading-1">
+        <div
+          class="bg"
+          style="background-image: url(./xbox-controller.jpg)"
+          aria-hidden="true"
+        ></div>
+        <h1 id="parallax-heading-1">Parallax Effect</h1>
+        <p>This is a simple parallax effect using CSS and JS.</p>
+      </section>
+      <section aria-labelledby="parallax-heading-2">
+        <div
+          class="bg"
+          style="background-image: url(./gamer.jpg)"
+          aria-hidden="true"
+        ></div>
+        <h1 id="parallax-heading-2">Another Section</h1>
+        <p>This is another section with a parallax effect.</p>
+      </section>
+      <section aria-labelledby="parallax-heading-3">
+        <div
+          class="bg"
+          style="background-image: url(./x-box-series.jpg)"
+          aria-hidden="true"
+        ></div>
+        <h1 id="parallax-heading-3">Yet Another Section</h1>
+        <p>This is yet another section with a parallax effect.</p>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.0/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
