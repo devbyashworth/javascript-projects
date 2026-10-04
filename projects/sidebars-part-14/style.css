@@ -1,0 +1,365 @@
+/* ==========================================
+   Variables
+========================================== */
+:root {
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+
+  --bg: #f4f7fb;
+  --sidebar: rgba(255, 255, 255, 0.88);
+
+  --text: #1f2937;
+  --muted: #6b7280;
+  --muted: #121212;
+
+  --border: #e5e7eb;
+
+  --hover: #f3f4f6;
+
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+
+  --radius: 18px;
+
+  --pad: 24px;
+
+  --icon: 22px;
+
+  --avatar: 46px;
+
+  --transition: 0.35s ease;
+}
+
+/* ==========================================
+   Dark Theme (default - see <body class="dark"> in the HTML)
+========================================== */
+
+body.dark {
+  --primary: #2563eb;
+  --primary-light: rgba(37, 99, 235, 0.18);
+
+  --bg: #121212;
+  --sidebar: rgba(255, 255, 255, 0.06);
+
+  --text: #f8fafc;
+  --muted: #94a3b8;
+
+  --border: rgba(255, 255, 255, 0.08);
+
+  --hover: rgba(255, 255, 255, 0.05);
+
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================
+   Reset
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 24px;
+
+  font-family: "Poppins", sans-serif;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  transition:
+    background var(--transition),
+    color var(--transition);
+}
+
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 40px;
+  translate: 0 -50%;
+  width: 280px;
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition:
+    width var(--transition),
+    background 0.3s;
+}
+
+.sidebar.collapsed {
+  width: calc(var(--icon) + var(--pad) * 2);
+}
+
+.sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  padding: var(--pad) 0;
+  border-radius: inherit;
+  background: var(--sidebar);
+  box-shadow: var(--shadow);
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 var(--pad);
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.sidebar.collapsed .brand {
+  visibility: hidden;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary-light);
+}
+
+.brand-mark img {
+  width: 34px;
+  height: 34px;
+  border-radius: 3px;
+}
+
+.brand-name {
+  flex: 1 1 auto;
+  color: var(--text);
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.collapse-btn:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+
+.sidebar.collapsed .collapse-btn {
+  right: 11px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 12px;
+}
+
+.avatar {
+  flex: 0 0 auto;
+  width: var(--avatar);
+  height: var(--avatar);
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: 0 6px 16px rgb(31 26 74 / 16%);
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-text {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.profile-name {
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.profile-role {
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--muted);
+  text-overflow: ellipsis;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  margin: 20px 16px;
+  background: var(--border);
+  transition: background 0.3s;
+}
+
+.nav {
+  flex: 0 1 auto;
+  list-style: none;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  width: 100%;
+  height: 54px;
+  cursor: pointer;
+  color: var(--muted);
+  padding: 0 var(--pad);
+  background: transparent;
+  transition:
+    background 0.25s,
+    color 0.25s;
+}
+
+.nav-link .label {
+  flex: 1 1 auto;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: var(--hover);
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  width: 6px;
+  height: 34px;
+  border-radius: 8px 0 0 8px;
+  background: var(--primary);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  width: 100%;
+  height: 54px;
+  margin-top: 12px;
+  color: var(--muted);
+  padding: 0 var(--pad);
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+}
+
+.theme-label {
+  flex: 1 1 auto;
+}
+
+.sidebar.collapsed .theme-toggle {
+  padding-inline: 0;
+  justify-content: center;
+}
+
+.sidebar.collapsed .theme-toggle .switch {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  flex: 0 0 auto;
+  display: block;
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background-color: #121212;
+  transition: background 0.25s;
+}
+
+.switch.on {
+  color: #121212;
+  background-color: #fefefe;
+}
+
+.switch span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fefefe;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  transition: left 0.25s;
+}
+
+.switch.on span {
+  left: 23px;
+  background-color: #121212;
+}
+
+.sidebar.collapsed .label {
+  display: none;
+}
+
+.sidebar .lucide {
+  flex: 0 0 auto;
+  stroke-width: 2;
+  width: var(--icon);
+  height: var(--icon);
+}

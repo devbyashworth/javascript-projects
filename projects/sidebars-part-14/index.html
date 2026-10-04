@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark">
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand">
+          <span class="brand-mark">
+            <img src="./dev.png" alt="company logo" />
+          </span>
+          <span class="brand-name label">DBA</span>
+        </div>
+        <button
+          type="button"
+          id="collapseBtn"
+          class="collapse-btn"
+          aria-label="Collapse sidebar"
+          aria-expanded="true"
+        >
+          <i data-lucide="panel-left" aria-hidden="true"></i>
+        </button>
+        <hr class="divider" />
+        <div class="profile">
+          <span class="avatar">
+            <img src="./dev_by_ashworth.png" alt="profile avatar" />
+          </span>
+          <span class="profile-text label">
+            <span class="profile-name">Ashworth S.</span>
+            <span class="profile-role">Frontend Developer</span>
+          </span>
+        </div>
+        <ul class="nav" role="navigation" aria-label="Main navigation">
+          <li>
+            <button type="button" class="nav-link active" aria-current="page">
+              <i data-lucide="layout-grid" aria-hidden="true"></i>
+              <span class="nav-text label">Dashboard</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="package" aria-hidden="true"></i>
+              <span class="nav-text label">Products</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="layers" aria-hidden="true"></i>
+              <span class="nav-text label">Categories</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="shopping-cart" aria-hidden="true"></i>
+              <span class="nav-text label">Orders</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="users" aria-hidden="true"></i>
+              <span class="nav-text label">Customers</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="tag" aria-hidden="true"></i>
+              <span class="nav-text label">Sales Offers</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="store" aria-hidden="true"></i>
+              <span class="nav-text label">Dealership</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span class="nav-text label">Locations</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="settings" aria-hidden="true"></i>
+              <span class="nav-text label">Settings</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-link">
+              <i data-lucide="log-out" aria-hidden="true"></i>
+              <span class="nav-text label">Logout</span>
+            </button>
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          id="themeToggle"
+          class="theme-toggle"
+          aria-pressed="true"
+          aria-label="Toggle dark mode"
+        >
+          <i data-lucide="moon" aria-hidden="true"></i>
+          <span class="theme-label label">Dark Mode</span>
+          <span class="switch on" aria-hidden="true"><span></span></span>
+        </button>
+      </div>
+    </aside>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@1.41.0"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
