@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio and selected projects." />
+
+    <title>Portfolio — Page Transitions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      try {
+        if (sessionStorage.getItem("page-transition-entering") === "true") {
+          sessionStorage.removeItem("page-transition-entering");
+          document.documentElement.classList.add("entering");
+        }
+      } catch {}
+    </script>
+  </head>
+
+  <body>
+    <div class="bubbles" aria-hidden="true">
+      <div class="bubble bubble__first"></div>
+      <div class="bubble bubble__second"></div>
+    </div>
+
+    <main>
+      <nav class="navigation" aria-label="Main navigation">
+        <h1>Portfolio</h1>
+
+        <ul>
+          <li>
+            <a href="index.html" data-theme="light"> Home </a>
+          </li>
+
+          <li>
+            <a href="portfolio.html" data-theme="dark" aria-current="page">
+              Portfolio
+            </a>
+          </li>
+
+          <li>
+            <a href="services.html" data-theme="light"> Services </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-theme="dark"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="page-content">
+        <span class="eyebrow">Selected Work</span>
+
+        <h2>Projects designed around people, products, and performance.</h2>
+
+        <p>
+          Explore interfaces, web applications, dashboards, and experiments
+          focused on thoughtful interaction design and maintainable frontend
+          architecture.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

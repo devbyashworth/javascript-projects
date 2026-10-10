@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Home page with smooth page transitions."
+    />
+
+    <title>Home — Page Transitions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      try {
+        if (sessionStorage.getItem("page-transition-entering") === "true") {
+          sessionStorage.removeItem("page-transition-entering");
+          document.documentElement.classList.add("entering");
+        }
+      } catch {}
+    </script>
+  </head>
+
+  <body>
+    <div class="bubbles" aria-hidden="true">
+      <div class="bubble bubble__first"></div>
+      <div class="bubble bubble__second"></div>
+    </div>
+
+    <main>
+      <nav class="navigation" aria-label="Main navigation">
+        <h1>Home</h1>
+
+        <ul>
+          <li>
+            <a href="index.html" data-theme="light" aria-current="page">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="portfolio.html" data-theme="dark"> Portfolio </a>
+          </li>
+
+          <li>
+            <a href="services.html" data-theme="light"> Services </a>
+          </li>
+
+          <li>
+            <a href="contact.html" data-theme="dark"> Contact </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="page-content">
+        <span class="eyebrow">Welcome</span>
+
+        <h2>Building digital experiences that feel effortless.</h2>
+
+        <p>
+          A small demonstration of smooth, immersive page transitions using
+          HTML, CSS, and JavaScript.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
