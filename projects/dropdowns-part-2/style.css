@@ -1,0 +1,362 @@
+:root {
+  --row: 56px;
+  --width: 240px;
+  --radius: 14px;
+
+  --ink: #f5f5f7;
+  --ink-2: rgb(235 235 245 / 60%);
+  --ink-3: rgb(235 235 245 / 48%);
+
+  --glass: rgb(38 38 40 / 72%);
+  --hover: rgb(255 255 255 / 6%);
+
+  --spring: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* =========================
+RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: 0;
+  font: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* =========================
+PAGE
+========================= */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin-top: -110px;
+  color: #fefefe;
+  background-color: #0f1117;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+DROPDOWN
+========================= */
+
+.dropdown {
+  position: relative;
+  width: var(--width);
+
+  animation: rise 800ms var(--spring) backwards;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* =========================
+TRIGGER
+========================= */
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  height: 64px;
+  padding: 0 16px;
+
+  border-radius: var(--radius);
+
+  color: var(--ink);
+  background: var(--glass);
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(50px);
+
+  box-shadow:
+    inset 0 0 0 0.5px rgb(255 255 255 / 16%),
+    inset 0 1px 0 rgb(255 255 255 / 10%),
+    0 16px 40px -12px rgb(0 0 0 / 55%);
+
+  transition:
+    transform 250ms var(--spring),
+    background 250ms var(--spring);
+}
+
+.trigger span {
+  flex: 1 1 auto;
+}
+
+.trigger:hover {
+  background: rgb(38 38 40 / 82%);
+}
+
+.trigger:active {
+  transform: scale(0.985);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid rgb(235 235 245 / 60%);
+  outline-offset: 2px;
+}
+
+/* =========================
+CHEVRONS
+========================= */
+
+.chevron {
+  flex: 0 0 auto;
+  transition: transform 400ms var(--spring);
+}
+
+.trigger .chevron {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+
+.row .chevron {
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.dropdown.open .trigger .chevron {
+  transform: rotate(180deg);
+}
+
+.row:hover .chevron {
+  transform: translateX(3px);
+}
+
+.back-btn:hover .chevron {
+  transform: translateX(-3px);
+}
+
+/* =========================
+ICONS
+========================= */
+
+.trigger > i,
+.row > i {
+  flex: 0 0 auto;
+  font-size: 18px;
+}
+
+.row > i:first-child {
+  width: 20px;
+  text-align: center;
+}
+
+/* =========================
+MENU
+========================= */
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
+  width: 100%;
+  height: var(--h, 224px);
+
+  overflow: hidden;
+
+  border-radius: var(--radius);
+
+  background: var(--glass);
+
+  backdrop-filter: blur(50px);
+
+  box-shadow:
+    inset 0 0 0 0.5px rgb(255 255 255 / 16%),
+    inset 0 1px 0 rgb(255 255 255 / 10%),
+    0 16px 40px -12px rgb(0 0 0 / 55%);
+
+  transform-origin: top center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-8px) scale(0.97);
+
+  transition:
+    opacity 240ms var(--spring),
+    transform 240ms var(--spring),
+    visibility 0s linear 240ms;
+}
+
+.dropdown.open .menu {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0) scale(1);
+
+  transition-delay: 0s;
+}
+
+/* =========================
+PAGES
+========================= */
+
+.pages {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(100%);
+
+  transition:
+    transform 280ms var(--spring),
+    opacity 280ms var(--spring),
+    visibility 0s linear 280ms;
+}
+
+.page[data-level="0"] {
+  transform: translateX(-100%);
+}
+
+.page.is-active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+
+  transition-delay: 0s;
+}
+
+/* =========================
+MENU ROW
+========================= */
+
+.row {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  width: 100%;
+  min-height: var(--row);
+  padding: 0 16px;
+
+  color: var(--ink);
+
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    color 200ms var(--spring),
+    background 200ms var(--spring);
+}
+
+.row span {
+  flex: 1 1 auto;
+}
+
+.row::before {
+  content: "";
+
+  position: absolute;
+  inset: 5px;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  transition: background 180ms var(--spring);
+}
+
+.row:hover::before {
+  background: var(--hover);
+}
+
+.row:focus-visible {
+  outline: 2px solid rgb(235 235 245 / 60%);
+  outline-offset: -2px;
+}
+
+.row > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+BACK BUTTON
+========================= */
+
+.back-btn {
+  font-weight: 600;
+}
+
+.back-btn span {
+  font-weight: 600;
+}
+
+/* =========================
+DIVIDER
+========================= */
+
+.page hr {
+  width: calc(100% - 32px);
+  height: 1px;
+
+  margin: 0 16px;
+
+  border: 0;
+
+  background: rgb(255 255 255 / 10%);
+}
+
+/* =========================
+REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

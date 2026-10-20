@@ -1,0 +1,217 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dropdown</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="dropdown" class="dropdown">
+      <button
+        type="button"
+        id="trigger"
+        class="trigger"
+        aria-haspopup="menu"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+
+        <span>Tyrant Job</span>
+
+        <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+      </button>
+
+      <div id="menu" class="menu" role="menu" aria-hidden="true">
+        <div id="pages" class="pages">
+          <!-- Root Menu -->
+          <div
+            class="page is-active"
+            data-page="root"
+            data-level="0"
+            aria-hidden="false"
+          >
+            <button
+              type="button"
+              class="row"
+              role="menuitem"
+              data-open="settings"
+            >
+              <i class="fa-solid fa-gear" aria-hidden="true"></i>
+              <span>Settings</span>
+              <i
+                class="fa-solid fa-chevron-right chevron"
+                aria-hidden="true"
+              ></i>
+            </button>
+
+            <button
+              type="button"
+              class="row"
+              role="menuitem"
+              data-open="account"
+            >
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <span>Account</span>
+              <i
+                class="fa-solid fa-chevron-right chevron"
+                aria-hidden="true"
+              ></i>
+            </button>
+
+            <button type="button" class="row" role="menuitem" data-open="team">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <span>Team</span>
+              <i
+                class="fa-solid fa-chevron-right chevron"
+                aria-hidden="true"
+              ></i>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+              <span>Logout</span>
+            </button>
+          </div>
+
+          <!-- Settings Sub-Menu -->
+          <div
+            class="page"
+            data-page="settings"
+            data-level="1"
+            aria-hidden="true"
+          >
+            <button
+              type="button"
+              class="row back-btn"
+              role="menuitem"
+              data-back="root"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              <span>Settings</span>
+            </button>
+
+            <hr />
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-box" aria-hidden="true"></i>
+              <span>Inventory</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              <span>Management</span>
+            </button>
+          </div>
+
+          <!-- Account Sub-Menu -->
+          <div
+            class="page"
+            data-page="account"
+            data-level="1"
+            aria-hidden="true"
+          >
+            <button
+              type="button"
+              class="row back-btn"
+              role="menuitem"
+              data-back="root"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              <span>Account</span>
+            </button>
+
+            <hr />
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-database" aria-hidden="true"></i>
+              <span>Storage</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+              <span>Rewards</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              <span>Support</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-truck" aria-hidden="true"></i>
+              <span>Shipping</span>
+            </button>
+          </div>
+
+          <!-- Team Sub-Menu -->
+          <div class="page" data-page="team" data-level="1" aria-hidden="true">
+            <button
+              type="button"
+              class="row back-btn"
+              role="menuitem"
+              data-back="root"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              <span>Team</span>
+            </button>
+
+            <hr />
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <span>Members</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-user-tag" aria-hidden="true"></i>
+              <span>Roles</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <span>Invitations</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+              <span>Permissions</span>
+            </button>
+
+            <button type="button" class="row" role="menuitem">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+              <span>Activity</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
