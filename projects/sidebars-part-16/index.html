@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div class="brand">
+          <span class="brand-mark">
+            <i data-lucide="layout-dashboard"></i>
+          </span>
+          <span class="brand-name label">Dashboard</span>
+        </div>
+
+        <button
+          type="button"
+          id="collapseBtn"
+          class="collapse-btn"
+          aria-label="Toggle Sidebar"
+        >
+          <i data-lucide="panel-left"></i>
+        </button>
+
+        <hr class="divider" />
+        <div class="profile">
+          <span class="avatar avatar-initials">OB</span>
+          <span class="profile-text label">
+            <span class="profile-name">Oxbow Bend</span>
+            <span class="profile-role">UI/UX Designer</span>
+          </span>
+        </div>
+
+        <ul class="nav">
+          <li class="indicator" aria-hidden="true"></li>
+          <li>
+            <button type="button" class="active" data-tip="Dashboard">
+              <i data-lucide="layout-grid"></i>
+              <span class="label">Dashboard</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Products">
+              <i data-lucide="shopping-bag"></i>
+              <span class="label">Products</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Categories">
+              <i data-lucide="tag"></i>
+              <span class="label">Categories</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Orders">
+              <i data-lucide="receipt"></i>
+              <span class="label">Orders</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Customers">
+              <i data-lucide="users"></i>
+              <span class="label">Customers</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Sale Offers">
+              <i data-lucide="badge-percent"></i>
+              <span class="label">Sale Offers</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Dealership">
+              <i data-lucide="store"></i>
+              <span class="label">Dealership</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Locations">
+              <i data-lucide="map-pin"></i>
+              <span class="label">Locations</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Settings">
+              <i data-lucide="settings"></i>
+              <span class="label">Settings</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-tip="Logout">
+              <i data-lucide="log-out" aria-hidden="true"></i>
+              <span class="label">Logout</span>
+            </button>
+          </li>
+        </ul>
+
+        <button
+          type="button"
+          id="themeToggle"
+          class="theme-toggle"
+          data-tip="Dark Mode"
+          aria-pressed="false"
+          aria-label="Toggle Dark Mode"
+        >
+          <i data-lucide="moon"></i>
+          <span class="theme-label label">Dark Mode</span>
+          <span class="switch"><span></span></span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="page-content">
+      <h1>Preview page content</h1>
+      <p>
+        This block isn't part of your component - it's only here so the fixed
+        sidebar has something to float over. Try the collapse button top-right
+        of the sidebar, hover a nav icon once collapsed, click a few nav rows,
+        and flip the dark-mode switch at the bottom.
+      </p>
+    </div>
+
+    <!-- Lucide Icons - pinned, per Lucide's own recommendation -->
+    <script src="https://unpkg.com/lucide@1.41.0"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
