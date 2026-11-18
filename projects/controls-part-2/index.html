@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controls</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="dropdown" class="dropdown">
+      <div class="textbox">
+        <input
+          type="text"
+          name="input"
+          id="input"
+          spellcheck="false"
+          autocomplete="off"
+          placeholder="Search"
+        />
+        <i class="search-icon" data-lucide="search"></i>
+        <button
+          type="button"
+          id="clear-btn"
+          class="clean-btn"
+          tabindex="-1"
+          aria-label="Clear Search"
+        >
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div id="menu" class="menu"></div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
