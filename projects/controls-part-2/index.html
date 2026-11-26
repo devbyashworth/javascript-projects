@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Controls</title>
+    <meta name="theme-color" content="#0e0e11" />
+    <meta
+      name="description"
+      content="Animated searchable dropdown component."
+    />
+    <title>Search Dropdown</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -19,31 +26,68 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <div id="dropdown" class="dropdown">
-      <div class="textbox">
-        <input
-          type="text"
-          name="input"
-          id="input"
-          spellcheck="false"
-          autocomplete="off"
-          placeholder="Search"
-        />
-        <i class="search-icon" data-lucide="search"></i>
-        <button
-          type="button"
-          id="clear-btn"
-          class="clean-btn"
-          tabindex="-1"
-          aria-label="Clear Search"
+    <main class="page">
+      <section class="search-component" aria-label="Character search">
+        <div class="dropdown" id="dropdown">
+          <div class="textbox">
+            <label class="visually-hidden" for="input">
+              Search characters
+            </label>
+
+            <input
+              type="search"
+              name="character"
+              id="input"
+              placeholder="Search characters..."
+              spellcheck="false"
+              autocomplete="off"
+              autocapitalize="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded="false"
+              aria-controls="menu"
+              aria-activedescendant=""
+            />
+
+            <i
+              class="ph ph-magnifying-glass search-icon"
+              aria-hidden="true"
+            ></i>
+
+            <button
+              type="button"
+              id="clear-btn"
+              class="clear-btn"
+              aria-label="Clear search"
+              title="Clear search"
+              hidden
+            >
+              <i class="ph ph-x" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <ul
+            id="menu"
+            class="menu"
+            role="listbox"
+            aria-label="Search suggestions"
+            hidden
+          ></ul>
+        </div>
+
+        <p
+          class="selection-status"
+          id="selectionStatus"
+          role="status"
+          aria-live="polite"
         >
-          <i data-lucide="x"></i>
-        </button>
-      </div>
-      <div id="menu" class="menu"></div>
-    </div>
-    <script type="text/javascript" src="script.js"></script>
+          Start typing to search for a character.
+        </p>
+      </section>
+    </main>
   </body>
 </html>
